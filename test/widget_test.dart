@@ -13,6 +13,21 @@ void main() {
     expect(find.text('我的'), findsOneWidget);
   });
 
+  testWidgets('紧凑手机首屏完整展示六条元器件', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(393, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    await tester.pumpWidget(const CompBoxApp(locale: Locale('zh')));
+
+    final sixthCard = find.byKey(const Key('component-connector-usb-c'));
+    final list = find.byKey(const Key('inventory-list'));
+
+    expect(sixthCard, findsOneWidget);
+    expect(
+      tester.getRect(sixthCard).bottom,
+      lessThanOrEqualTo(tester.getRect(list).bottom),
+    );
+  });
+
   testWidgets('搜索按名称、型号和库位过滤元器件', (tester) async {
     await tester.pumpWidget(const CompBoxApp(locale: Locale('zh')));
 

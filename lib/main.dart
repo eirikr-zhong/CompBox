@@ -256,7 +256,7 @@ class _InventoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       key: const Key('inventory-list'),
-      padding: const EdgeInsets.fromLTRB(20, 18, 20, 28),
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),
       keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
       itemCount: components.length + 3,
       itemBuilder: (context, index) {
@@ -272,17 +272,17 @@ class _InventoryPage extends StatelessWidget {
         }
         if (index == 2) {
           return Padding(
-            padding: const EdgeInsets.fromLTRB(2, 30, 0, 16),
+            padding: const EdgeInsets.fromLTRB(2, 22, 0, 12),
             child: Text(
               AppLocalizations.of(context)!.myComponents,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
           );
         }
 
         final component = components[index - 3];
         return Padding(
-          padding: const EdgeInsets.only(bottom: 8),
+          padding: const EdgeInsets.only(bottom: 6),
           child: ComponentCard(
             component: component,
             onPressed: () => onComponentPressed(component),
@@ -299,7 +299,7 @@ class _HomeHeading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 26),
+      padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         children: [
           Expanded(
@@ -307,15 +307,15 @@ class _HomeHeading extends StatelessWidget {
               AppLocalizations.of(context)!.homeTitle,
               style: const TextStyle(
                 color: Color(0xFF121419),
-                fontSize: 32,
+                fontSize: 28,
                 fontWeight: FontWeight.w800,
                 height: 1.1,
               ),
             ),
           ),
           Container(
-            width: 48,
-            height: 48,
+            width: 42,
+            height: 42,
             decoration: const BoxDecoration(
               color: Color(0xFFEFF3F7),
               shape: BoxShape.circle,
@@ -323,7 +323,7 @@ class _HomeHeading extends StatelessWidget {
             child: const Icon(
               Icons.account_circle_rounded,
               color: Color(0xFF7D8798),
-              size: 39,
+              size: 34,
             ),
           ),
         ],
@@ -346,20 +346,20 @@ class _SearchField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 54,
+      height: 48,
       child: TextField(
         key: const Key('component-search'),
         controller: controller,
         onChanged: onChanged,
         textInputAction: TextInputAction.search,
-        style: const TextStyle(fontSize: 16, color: Color(0xFF24272D)),
+        style: const TextStyle(fontSize: 15, color: Color(0xFF24272D)),
         decoration: InputDecoration(
           hintText: AppLocalizations.of(context)!.searchHint,
-          hintStyle: const TextStyle(color: Color(0xFF8B95A7), fontSize: 16),
+          hintStyle: const TextStyle(color: Color(0xFF8B95A7), fontSize: 15),
           prefixIcon: const Icon(
             Icons.search_rounded,
             color: Color(0xFF8993A5),
-            size: 27,
+            size: 24,
           ),
           suffixIcon: IconButton(
             key: const Key('scan-button'),
@@ -368,18 +368,18 @@ class _SearchField extends StatelessWidget {
             icon: const Icon(
               Icons.qr_code_scanner_rounded,
               color: Color(0xFF0878F8),
-              size: 25,
+              size: 23,
             ),
           ),
           filled: true,
           fillColor: Colors.white,
           contentPadding: const EdgeInsets.symmetric(vertical: 0),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(27),
+            borderRadius: BorderRadius.circular(24),
             borderSide: const BorderSide(color: Color(0xFFE5E8EE)),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(27),
+            borderRadius: BorderRadius.circular(24),
             borderSide: const BorderSide(color: Color(0xFF0878F8), width: 1.4),
           ),
         ),
@@ -402,37 +402,37 @@ class ComponentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.circular(12),
       child: InkWell(
         key: Key('component-${component.id}'),
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(12),
         onTap: onPressed,
         child: Container(
-          height: 104,
-          padding: const EdgeInsets.all(12),
+          height: 78,
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(12),
             border: Border.all(color: const Color(0xFFEFF1F4)),
             boxShadow: const [
               BoxShadow(
                 color: Color(0x08000000),
-                blurRadius: 12,
-                offset: Offset(0, 4),
+                blurRadius: 8,
+                offset: Offset(0, 2),
               ),
             ],
           ),
           child: Row(
             children: [
-              ComponentThumbnail(category: component.category, size: 64),
-              const SizedBox(width: 11),
+              ComponentThumbnail(category: component.category, size: 54),
+              const SizedBox(width: 9),
               Expanded(child: _ComponentOverview(component: component)),
-              const SizedBox(width: 7),
+              const SizedBox(width: 5),
               _InventorySummary(component: component),
               const SizedBox(width: 1),
               const Icon(
                 Icons.chevron_right_rounded,
                 color: Color(0xFF9AA4B5),
-                size: 23,
+                size: 20,
               ),
             ],
           ),
@@ -465,7 +465,7 @@ class ComponentThumbnail extends StatelessWidget {
       height: size,
       decoration: BoxDecoration(
         color: const Color(0xFFF5F6F8),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(8),
         border: Border.all(color: const Color(0xFFE8EBEF)),
       ),
       alignment: Alignment.center,
@@ -483,8 +483,8 @@ class _ComponentOverview extends StatelessWidget {
   Widget build(BuildContext context) {
     const secondary = TextStyle(
       color: Color(0xFF717B8D),
-      fontSize: 13,
-      height: 1.3,
+      fontSize: 11.5,
+      height: 1.2,
     );
     final l10n = AppLocalizations.of(context)!;
     return Column(
@@ -496,12 +496,12 @@ class _ComponentOverview extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           style: const TextStyle(
-            fontSize: 17,
+            fontSize: 16,
             fontWeight: FontWeight.w700,
             height: 1.2,
           ),
         ),
-        const SizedBox(height: 6),
+        const SizedBox(height: 4),
         Text(
           component.specification(l10n),
           maxLines: 1,
@@ -528,7 +528,7 @@ class _InventorySummary extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return SizedBox(
-      width: 72,
+      width: 68,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -537,28 +537,36 @@ class _InventorySummary extends StatelessWidget {
             l10n.location,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(color: Color(0xFF8D96A5), fontSize: 12),
+            style: const TextStyle(
+              color: Color(0xFF8D96A5),
+              fontSize: 10,
+              height: 1,
+            ),
           ),
-          const SizedBox(height: 2),
+          const SizedBox(height: 1),
           Text(
             component.location,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(fontSize: 15.5, height: 1.1),
+            style: const TextStyle(fontSize: 13.5, height: 1),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 3),
           Text(
             l10n.quantity,
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: TextStyle(color: Color(0xFF8D96A5), fontSize: 12),
+            style: const TextStyle(
+              color: Color(0xFF8D96A5),
+              fontSize: 10,
+              height: 1,
+            ),
           ),
           const SizedBox(height: 1),
           Text(
             _quantityLabel(context, component.quantity),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
-            style: const TextStyle(fontSize: 15, height: 1),
+            style: const TextStyle(fontSize: 13.5, height: 1),
           ),
         ],
       ),
@@ -583,7 +591,7 @@ class _BottomNavigation extends StatelessWidget {
   Widget build(BuildContext context) {
     final selectedColor = Theme.of(context).colorScheme.primary;
     return SizedBox(
-      height: 92,
+      height: 80,
       child: Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.topCenter,
@@ -605,7 +613,7 @@ class _BottomNavigation extends StatelessWidget {
                     onPressed: onHomePressed,
                   ),
                 ),
-                const SizedBox(width: 98),
+                const SizedBox(width: 80),
                 Expanded(
                   child: _NavigationItem(
                     key: const Key('profile-tab'),
@@ -634,18 +642,18 @@ class _BottomNavigation extends StatelessWidget {
                   customBorder: const CircleBorder(),
                   onTap: onNfcPressed,
                   child: const SizedBox(
-                    width: 82,
-                    height: 82,
+                    width: 70,
+                    height: 70,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.nfc_rounded, color: Colors.white, size: 33),
+                        Icon(Icons.nfc_rounded, color: Colors.white, size: 28),
                         SizedBox(height: 1),
                         Text(
                           'NFC',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 14,
+                            fontSize: 12,
                             height: 1.1,
                           ),
                         ),
@@ -684,17 +692,17 @@ class _NavigationItem extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Padding(
-        padding: const EdgeInsets.only(top: 17, bottom: 9),
+        padding: const EdgeInsets.only(top: 13, bottom: 7),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Icon(icon, color: color, size: 27),
-            const SizedBox(height: 4),
+            Icon(icon, color: color, size: 23),
+            const SizedBox(height: 3),
             Text(
               label,
               style: TextStyle(
                 color: color,
-                fontSize: 13,
+                fontSize: 11.5,
                 fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
               ),
             ),
