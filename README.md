@@ -1,4 +1,4 @@
-# part_box
+# CompBox
 
 A new Flutter project.
 
