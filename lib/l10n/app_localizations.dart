@@ -134,6 +134,42 @@ abstract class AppLocalizations {
   /// **'My components'**
   String get myComponents;
 
+  /// No description provided for @allCategories.
+  ///
+  /// In en, this message translates to:
+  /// **'All categories'**
+  String get allCategories;
+
+  /// No description provided for @emptyInventoryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No component records yet'**
+  String get emptyInventoryTitle;
+
+  /// No description provided for @emptyInventoryDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan an NFC tag to create the first record.'**
+  String get emptyInventoryDescription;
+
+  /// No description provided for @noMatchingComponents.
+  ///
+  /// In en, this message translates to:
+  /// **'No matching components'**
+  String get noMatchingComponents;
+
+  /// No description provided for @noMatchingComponentsDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Adjust the search or category filter.'**
+  String get noMatchingComponentsDescription;
+
+  /// No description provided for @resourceLoadError.
+  ///
+  /// In en, this message translates to:
+  /// **'Local resource configuration could not be loaded.'**
+  String get resourceLoadError;
+
   /// No description provided for @location.
   ///
   /// In en, this message translates to:
@@ -145,6 +181,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Qty'**
   String get quantity;
+
+  /// No description provided for @inventory.
+  ///
+  /// In en, this message translates to:
+  /// **'Inventory'**
+  String get inventory;
 
   /// No description provided for @quantityValue.
   ///
@@ -161,7 +203,7 @@ abstract class AppLocalizations {
   /// No description provided for @profile.
   ///
   /// In en, this message translates to:
-  /// **'Profile'**
+  /// **'Settings'**
   String get profile;
 
   /// No description provided for @nfcScan.
@@ -175,6 +217,354 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Preparing NFC scan'**
   String get nfcPreparing;
+
+  /// No description provided for @nfcTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'NFC'**
+  String get nfcTitle;
+
+  /// No description provided for @nfcScanningTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'NFC scanning'**
+  String get nfcScanningTitle;
+
+  /// No description provided for @nfcScanning.
+  ///
+  /// In en, this message translates to:
+  /// **'Scanning'**
+  String get nfcScanning;
+
+  /// No description provided for @nfcScanInstruction.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold the back of your phone near the NFC tag'**
+  String get nfcScanInstruction;
+
+  /// No description provided for @nfcReadyToScan.
+  ///
+  /// In en, this message translates to:
+  /// **'Ready to scan an NFC tag'**
+  String get nfcReadyToScan;
+
+  /// No description provided for @nfcScanTag.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan tag'**
+  String get nfcScanTag;
+
+  /// No description provided for @nfcRescan.
+  ///
+  /// In en, this message translates to:
+  /// **'Rescan tag'**
+  String get nfcRescan;
+
+  /// No description provided for @nfcWriteTag.
+  ///
+  /// In en, this message translates to:
+  /// **'Rescan and write tag'**
+  String get nfcWriteTag;
+
+  /// No description provided for @nfcError.
+  ///
+  /// In en, this message translates to:
+  /// **'NFC operation failed'**
+  String get nfcError;
+
+  /// No description provided for @nfcUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'This device does not support NFC.'**
+  String get nfcUnavailable;
+
+  /// No description provided for @nfcDisabled.
+  ///
+  /// In en, this message translates to:
+  /// **'NFC is off. Turn it on in system settings.'**
+  String get nfcDisabled;
+
+  /// No description provided for @nfcUnsupportedTag.
+  ///
+  /// In en, this message translates to:
+  /// **'This tag does not support NDEF.'**
+  String get nfcUnsupportedTag;
+
+  /// No description provided for @nfcReadOnly.
+  ///
+  /// In en, this message translates to:
+  /// **'This NFC tag is read-only and cannot be written.'**
+  String get nfcReadOnly;
+
+  /// No description provided for @nfcCapacityError.
+  ///
+  /// In en, this message translates to:
+  /// **'This tag does not have enough capacity for the snapshot.'**
+  String get nfcCapacityError;
+
+  /// No description provided for @nfcPayloadTooLarge.
+  ///
+  /// In en, this message translates to:
+  /// **'The snapshot is {bytes} bytes and exceeds the conservative tag limit of {limit} bytes.'**
+  String nfcPayloadTooLarge(String bytes, String limit);
+
+  /// No description provided for @nfcUidMismatch.
+  ///
+  /// In en, this message translates to:
+  /// **'The rescanned tag is not the tag currently being edited.'**
+  String get nfcUidMismatch;
+
+  /// No description provided for @nfcCrcError.
+  ///
+  /// In en, this message translates to:
+  /// **'The tag snapshot checksum failed; its data may be damaged.'**
+  String get nfcCrcError;
+
+  /// No description provided for @nfcUnknownProtocol.
+  ///
+  /// In en, this message translates to:
+  /// **'The tag does not contain a recognizable CompBox snapshot.'**
+  String get nfcUnknownProtocol;
+
+  /// No description provided for @nfcUnsupportedVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'This tag uses an unsupported CompBox snapshot version.'**
+  String get nfcUnsupportedVersion;
+
+  /// No description provided for @nfcInvalidSnapshot.
+  ///
+  /// In en, this message translates to:
+  /// **'The tag snapshot is invalid.'**
+  String get nfcInvalidSnapshot;
+
+  /// No description provided for @nfcNeedsInitialization.
+  ///
+  /// In en, this message translates to:
+  /// **'This tag needs to be initialized before it can be used with CompBox.'**
+  String get nfcNeedsInitialization;
+
+  /// No description provided for @nfcReinitializeTag.
+  ///
+  /// In en, this message translates to:
+  /// **'This tag uses an older CompBox format. Reinitialize it before use.'**
+  String get nfcReinitializeTag;
+
+  /// No description provided for @nfcSlotSelectionTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose a compartment'**
+  String get nfcSlotSelectionTitle;
+
+  /// No description provided for @nfcFinishEditing.
+  ///
+  /// In en, this message translates to:
+  /// **'Done editing'**
+  String get nfcFinishEditing;
+
+  /// No description provided for @nfcSaveAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Save all compartments'**
+  String get nfcSaveAll;
+
+  /// No description provided for @nfcClearTag.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear tag'**
+  String get nfcClearTag;
+
+  /// No description provided for @nfcClearTagDialogDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold the back of your phone near the NFC tag to clear it.'**
+  String get nfcClearTagDialogDescription;
+
+  /// No description provided for @nfcClearTagSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'NFC tag cleared'**
+  String get nfcClearTagSuccess;
+
+  /// No description provided for @nfcSlotEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Empty'**
+  String get nfcSlotEmpty;
+
+  /// No description provided for @nfcSlotLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Compartment {index}'**
+  String nfcSlotLabel(String index);
+
+  /// No description provided for @nfcCustomTextTooLong.
+  ///
+  /// In en, this message translates to:
+  /// **'The custom text is too long to write to this tag.'**
+  String get nfcCustomTextTooLong;
+
+  /// No description provided for @nfcReadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'This NFC tag could not be read. Try again.'**
+  String get nfcReadFailed;
+
+  /// No description provided for @nfcWriteFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'This NFC tag could not be written. Try again.'**
+  String get nfcWriteFailed;
+
+  /// No description provided for @nfcTagOverridesLocalTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Replace the local record with the tag?'**
+  String get nfcTagOverridesLocalTitle;
+
+  /// No description provided for @nfcTagOverridesLocalDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'The local copy at {location} differs from the tag. Confirm to replace the local copy with the tag contents.'**
+  String nfcTagOverridesLocalDescription(String location);
+
+  /// No description provided for @nfcTagRead.
+  ///
+  /// In en, this message translates to:
+  /// **'NFC tag read'**
+  String get nfcTagRead;
+
+  /// No description provided for @nfcRead.
+  ///
+  /// In en, this message translates to:
+  /// **'Read'**
+  String get nfcRead;
+
+  /// No description provided for @nfcTagReadDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Tag information is ready to edit'**
+  String get nfcTagReadDescription;
+
+  /// No description provided for @componentName.
+  ///
+  /// In en, this message translates to:
+  /// **'Component name'**
+  String get componentName;
+
+  /// No description provided for @componentNameHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter component name'**
+  String get componentNameHint;
+
+  /// No description provided for @modelSpecification.
+  ///
+  /// In en, this message translates to:
+  /// **'Model / specification'**
+  String get modelSpecification;
+
+  /// No description provided for @modelSpecificationHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter model or specification'**
+  String get modelSpecificationHint;
+
+  /// No description provided for @decreaseQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Decrease quantity'**
+  String get decreaseQuantity;
+
+  /// No description provided for @increaseQuantity.
+  ///
+  /// In en, this message translates to:
+  /// **'Increase quantity'**
+  String get increaseQuantity;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @nfcSaveDialogTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Save scanned tag'**
+  String get nfcSaveDialogTitle;
+
+  /// No description provided for @nfcSaveDialogDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold the back of your phone near the NFC tag to save.'**
+  String get nfcSaveDialogDescription;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @requiredField.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter {field}'**
+  String requiredField(String field);
+
+  /// No description provided for @invalidInteger.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a whole number'**
+  String get invalidInteger;
+
+  /// No description provided for @invalidNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid number'**
+  String get invalidNumber;
+
+  /// No description provided for @invalidLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a location like A-01-03 (numbers 1–255)'**
+  String get invalidLocation;
+
+  /// No description provided for @insufficientStock.
+  ///
+  /// In en, this message translates to:
+  /// **'Stock out cannot exceed current stock'**
+  String get insufficientStock;
+
+  /// No description provided for @currentQuantityValue.
+  ///
+  /// In en, this message translates to:
+  /// **'Current stock: {quantity}'**
+  String currentQuantityValue(String quantity);
+
+  /// No description provided for @recordSaved.
+  ///
+  /// In en, this message translates to:
+  /// **'Record saved'**
+  String get recordSaved;
+
+  /// No description provided for @overwriteRecordTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Overwrite existing record?'**
+  String get overwriteRecordTitle;
+
+  /// No description provided for @overwriteRecordDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'{location} already has a record. Confirm to replace it with the complete form data.'**
+  String overwriteRecordDescription(String location);
+
+  /// No description provided for @overwrite.
+  ///
+  /// In en, this message translates to:
+  /// **'Overwrite'**
+  String get overwrite;
 
   /// No description provided for @componentDetail.
   ///
@@ -341,7 +731,7 @@ abstract class AppLocalizations {
   /// No description provided for @profileTitle.
   ///
   /// In en, this message translates to:
-  /// **'Profile'**
+  /// **'Settings'**
   String get profileTitle;
 
   /// No description provided for @profileMonogram.
@@ -386,6 +776,66 @@ abstract class AppLocalizations {
   /// **'Locations'**
   String get locationStat;
 
+  /// No description provided for @initializeTagSection.
+  ///
+  /// In en, this message translates to:
+  /// **'NFC tags'**
+  String get initializeTagSection;
+
+  /// No description provided for @initializeTagTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Initialize NFC tag'**
+  String get initializeTagTitle;
+
+  /// No description provided for @initializeTagDescription.
+  ///
+  /// In en, this message translates to:
+  /// **'Create a 1×N CompBox container on an NFC tag.'**
+  String get initializeTagDescription;
+
+  /// No description provided for @initializeTagColumns.
+  ///
+  /// In en, this message translates to:
+  /// **'Compartments'**
+  String get initializeTagColumns;
+
+  /// No description provided for @initializeTagLayout.
+  ///
+  /// In en, this message translates to:
+  /// **'1×{columns}'**
+  String initializeTagLayout(String columns);
+
+  /// No description provided for @initializeTagAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Initialize'**
+  String get initializeTagAction;
+
+  /// No description provided for @initializeTagConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Initialization clears all existing tag content, including older CompBox records and unrecognized NDEF data.'**
+  String get initializeTagConfirmation;
+
+  /// No description provided for @initializeTagFirstScan.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold the tag near your phone to check it.'**
+  String get initializeTagFirstScan;
+
+  /// No description provided for @initializeTagSecondScan.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold the same tag near your phone again to initialize it.'**
+  String get initializeTagSecondScan;
+
+  /// No description provided for @initializeTagSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'NFC tag initialized'**
+  String get initializeTagSuccess;
+
   /// No description provided for @settings.
   ///
   /// In en, this message translates to:
@@ -403,6 +853,96 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Settings are under design'**
   String get settingsInProgress;
+
+  /// No description provided for @exportDatabase.
+  ///
+  /// In en, this message translates to:
+  /// **'Export database'**
+  String get exportDatabase;
+
+  /// No description provided for @exportDatabaseSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Exported {count} component records'**
+  String exportDatabaseSuccess(String count);
+
+  /// No description provided for @exportDatabaseFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'The database could not be exported. Try again.'**
+  String get exportDatabaseFailed;
+
+  /// No description provided for @importDatabase.
+  ///
+  /// In en, this message translates to:
+  /// **'Import database'**
+  String get importDatabase;
+
+  /// No description provided for @importDatabaseConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'This backup contains {count} records. Continuing will replace the current local database and cannot be undone. NFC tag contents will not be changed.'**
+  String importDatabaseConfirmation(String count);
+
+  /// No description provided for @confirmImportDatabase.
+  ///
+  /// In en, this message translates to:
+  /// **'Import backup'**
+  String get confirmImportDatabase;
+
+  /// No description provided for @importDatabaseSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Imported {count} component records'**
+  String importDatabaseSuccess(String count);
+
+  /// No description provided for @invalidBackupFile.
+  ///
+  /// In en, this message translates to:
+  /// **'The selected file is not a valid CompBox backup'**
+  String get invalidBackupFile;
+
+  /// No description provided for @importDatabaseFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'The database could not be imported. Try again.'**
+  String get importDatabaseFailed;
+
+  /// No description provided for @clearDatabase.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear database'**
+  String get clearDatabase;
+
+  /// No description provided for @clearDatabaseConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'This cannot be undone. All locally stored component records will be permanently deleted. NFC tag contents will not be changed.'**
+  String get clearDatabaseConfirmation;
+
+  /// No description provided for @confirmClearDatabase.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear database'**
+  String get confirmClearDatabase;
+
+  /// No description provided for @clearDatabaseSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Local database cleared'**
+  String get clearDatabaseSuccess;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @recordDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Record deleted'**
+  String get recordDeleted;
 }
 
 class _AppLocalizationsDelegate

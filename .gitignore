@@ -12,6 +12,9 @@
 .swiftpm/
 migrate_working_dir/
 
+# Local image files
+*.png
+
 # IntelliJ related
 *.iml
 *.ipr
@@ -31,6 +34,7 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+/android/build/
 /coverage/
 
 # Symbolication related

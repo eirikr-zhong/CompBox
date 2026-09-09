@@ -1,0 +1,213 @@
+categories:
+  - id: resistor
+    name: "@i18n.category.resistor.name"
+    icon: icons/resistor.svg
+    fieldIds: [resistorType, value, tolerance, package, manufacturerModel, notes, quantity]
+    nfc:
+      code: 1
+      value:
+        fieldId: value
+        unit: ohm
+        valueType: resistance
+        defaultUnitId: kiloohm
+        units:
+          - {id: megaohm, symbol: "MΩ", multiplier: 1000000, label: "@i18n.unit.megaohm"}
+          - {id: kiloohm, symbol: "kΩ", multiplier: 1000, label: "@i18n.unit.kiloohm"}
+          - {id: ohm, symbol: "Ω", multiplier: 1, label: "@i18n.unit.ohm"}
+          - {id: milliohm, symbol: "mΩ", multiplier: 0.001, label: "@i18n.unit.milliohm"}
+        dictionary:
+          - {id: 10r, code: 1, label: "@i18n.category.resistor.value.10r"}
+          - {id: 100r, code: 2, label: "@i18n.category.resistor.value.100r"}
+          - {id: 1k, code: 3, label: "@i18n.category.resistor.value.1k"}
+          - {id: 10k, code: 4, label: "@i18n.category.resistor.value.10k"}
+          - {id: 100k, code: 5, label: "@i18n.category.resistor.value.100k"}
+          - {id: 1m, code: 6, label: "@i18n.category.resistor.value.1m"}
+        presets:
+          - id: e24
+            label: "@i18n.valueSeries.e24"
+            values: [1.0, 1.1, 1.2, 1.3, 1.5, 1.6, 1.8, 2.0, 2.2, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.2, 6.8, 7.5, 8.2, 9.1]
+            minExponent: 0
+            maxExponent: 7
+            maximum: 10000000
+          - id: e96
+            label: "@i18n.valueSeries.e96"
+            values: [1.00, 1.02, 1.05, 1.07, 1.10, 1.13, 1.15, 1.18, 1.21, 1.24, 1.27, 1.30, 1.33, 1.37, 1.40, 1.43, 1.47, 1.50, 1.54, 1.58, 1.62, 1.65, 1.69, 1.74, 1.78, 1.82, 1.87, 1.91, 1.96, 2.00, 2.05, 2.10, 2.15, 2.21, 2.26, 2.32, 2.37, 2.43, 2.49, 2.55, 2.61, 2.67, 2.74, 2.80, 2.87, 2.94, 3.01, 3.09, 3.16, 3.24, 3.32, 3.40, 3.48, 3.57, 3.65, 3.74, 3.83, 3.92, 4.02, 4.12, 4.22, 4.32, 4.42, 4.53, 4.64, 4.75, 4.87, 4.99, 5.11, 5.23, 5.36, 5.49, 5.62, 5.76, 5.90, 6.04, 6.19, 6.34, 6.49, 6.65, 6.81, 6.98, 7.15, 7.32, 7.50, 7.68, 7.87, 8.06, 8.25, 8.45, 8.66, 8.87, 9.09, 9.31, 9.53, 9.76]
+            minExponent: 0
+            maxExponent: 7
+            maximum: 10000000
+      secondaryFieldId: package
+  - id: capacitor
+    name: "@i18n.category.capacitor.name"
+    icon: icons/capacitor.svg
+    fieldIds: [capacitorType, value, tolerance, package, manufacturerModel, notes, quantity]
+    nfc:
+      code: 2
+      value:
+        fieldId: value
+        unit: farad
+        valueType: capacitance
+        defaultUnitId: nanofarad
+        units:
+          - {id: farad, symbol: F, multiplier: 1, label: "@i18n.unit.farad"}
+          - {id: millifarad, symbol: mF, multiplier: 0.001, label: "@i18n.unit.millifarad"}
+          - {id: microfarad, symbol: "µF", multiplier: 0.000001, label: "@i18n.unit.microfarad"}
+          - {id: nanofarad, symbol: nF, multiplier: 0.000000001, label: "@i18n.unit.nanofarad"}
+          - {id: picofarad, symbol: pF, multiplier: 0.000000000001, label: "@i18n.unit.picofarad"}
+        dictionary:
+          - {id: 10pf, code: 1, label: "@i18n.category.capacitor.value.10pf"}
+          - {id: 100pf, code: 2, label: "@i18n.category.capacitor.value.100pf"}
+          - {id: 1nf, code: 3, label: "@i18n.category.capacitor.value.1nf"}
+          - {id: 10nf, code: 4, label: "@i18n.category.capacitor.value.10nf"}
+          - {id: 100nf, code: 5, label: "@i18n.category.capacitor.value.100nf"}
+          - {id: 1uf, code: 6, label: "@i18n.category.capacitor.value.1uf"}
+          - {id: 10uf, code: 7, label: "@i18n.category.capacitor.value.10uf"}
+          - {id: 100uf, code: 8, label: "@i18n.category.capacitor.value.100uf"}
+        presets:
+          - id: e6
+            label: "@i18n.valueSeries.e6"
+            values: [1.0, 1.5, 2.2, 3.3, 4.7, 6.8]
+            minExponent: -12
+            maxExponent: -1
+            maximum: 0.1
+      secondaryFieldId: package
+  - id: diode
+    name: "@i18n.category.diode.name"
+    icon: icons/diode.svg
+    fieldIds: [diodeType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 3, secondaryFieldId: package}
+  - id: inductor
+    name: "@i18n.category.inductor.name"
+    icon: icons/inductor.svg
+    fieldIds: [inductorType, value, tolerance, package, manufacturerModel, notes, quantity]
+    nfc:
+      code: 4
+      value:
+        fieldId: value
+        unit: henry
+        valueType: inductance
+        defaultUnitId: microhenry
+        units:
+          - {id: henry, symbol: H, multiplier: 1, label: "@i18n.unit.henry"}
+          - {id: millihenry, symbol: mH, multiplier: 0.001, label: "@i18n.unit.millihenry"}
+          - {id: microhenry, symbol: "µH", multiplier: 0.000001, label: "@i18n.unit.microhenry"}
+          - {id: nanohenry, symbol: nH, multiplier: 0.000000001, label: "@i18n.unit.nanohenry"}
+        dictionary:
+          - {id: 1uh, code: 1, label: "@i18n.category.inductor.value.1uh"}
+          - {id: 10uh, code: 2, label: "@i18n.category.inductor.value.10uh"}
+          - {id: 22uh, code: 3, label: "@i18n.category.inductor.value.22uh"}
+          - {id: 100uh, code: 4, label: "@i18n.category.inductor.value.100uh"}
+          - {id: 1mh, code: 5, label: "@i18n.category.inductor.value.1mh"}
+          - {id: 10mh, code: 6, label: "@i18n.category.inductor.value.10mh"}
+        presets:
+          - id: e12
+            label: "@i18n.valueSeries.e12"
+            values: [1.0, 1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 3.9, 4.7, 5.6, 6.8, 8.2]
+            minExponent: -9
+            maxExponent: -1
+            maximum: 0.1
+      secondaryFieldId: package
+  - id: integrated-circuit
+    name: "@i18n.category.integrated-circuit.name"
+    icon: icons/integrated-circuit.svg
+    fieldIds: [integratedCircuitType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 5, secondaryFieldId: package}
+  - id: connector
+    name: "@i18n.category.connector.name"
+    icon: icons/connector.svg
+    fieldIds: [connectorType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 6, secondaryFieldId: connectorType}
+  - id: led
+    name: "@i18n.category.led.name"
+    icon: icons/led.svg
+    fieldIds: [ledType, ledColor, package, manufacturerModel, notes, quantity]
+    nfc: {code: 7, secondaryFieldId: ledColor}
+  - id: transistor
+    name: "@i18n.category.transistor.name"
+    icon: icons/transistor.svg
+    fieldIds: [transistorType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 8, secondaryFieldId: transistorType}
+  - id: crystal-oscillator
+    name: "@i18n.category.crystal-oscillator.name"
+    icon: icons/crystal-oscillator.svg
+    fieldIds: [oscillatorType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 9, secondaryFieldId: oscillatorType}
+  - id: relay
+    name: "@i18n.category.relay.name"
+    icon: icons/relay.svg
+    fieldIds: [relayType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 10, secondaryFieldId: relayType}
+  - id: switch
+    name: "@i18n.category.switch.name"
+    icon: icons/switch.svg
+    fieldIds: [switchType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 11, secondaryFieldId: switchType}
+  - id: sensor
+    name: "@i18n.category.sensor.name"
+    icon: icons/sensor.svg
+    fieldIds: [sensorType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 12, secondaryFieldId: sensorType}
+  - id: transformer
+    name: "@i18n.category.transformer.name"
+    icon: icons/transformer.svg
+    fieldIds: [transformerType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 13, secondaryFieldId: transformerType}
+  - id: circuit-protection
+    name: "@i18n.category.circuit-protection.name"
+    icon: icons/circuit-protection.svg
+    fieldIds: [protectionType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 14, secondaryFieldId: protectionType}
+  - id: optocoupler
+    name: "@i18n.category.optocoupler.name"
+    icon: icons/optocoupler.svg
+    fieldIds: [optocouplerType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 15, secondaryFieldId: optocouplerType}
+  - id: potentiometer
+    name: "@i18n.category.potentiometer.name"
+    icon: icons/potentiometer.svg
+    fieldIds: [potentiometerType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 16, secondaryFieldId: potentiometerType}
+  - id: power-module
+    name: "@i18n.category.power-module.name"
+    icon: icons/power-module.svg
+    fieldIds: [powerModuleType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 17, secondaryFieldId: powerModuleType}
+  - id: battery
+    name: "@i18n.category.battery.name"
+    icon: icons/battery.svg
+    fieldIds: [batteryType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 18, secondaryFieldId: batteryType}
+  - id: motor-actuator
+    name: "@i18n.category.motor-actuator.name"
+    icon: icons/motor-actuator.svg
+    fieldIds: [motorType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 19, secondaryFieldId: motorType}
+  - id: audio
+    name: "@i18n.category.audio.name"
+    icon: icons/audio.svg
+    fieldIds: [audioType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 20, secondaryFieldId: audioType}
+  - id: display
+    name: "@i18n.category.display.name"
+    icon: icons/display.svg
+    fieldIds: [displayType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 21, secondaryFieldId: displayType}
+  - id: development-module
+    name: "@i18n.category.development-module.name"
+    icon: icons/development-module.svg
+    fieldIds: [moduleType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 22, secondaryFieldId: moduleType}
+  - id: rf-component
+    name: "@i18n.category.rf-component.name"
+    icon: icons/rf-component.svg
+    fieldIds: [rfType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 23, secondaryFieldId: rfType}
+  - id: filter
+    name: "@i18n.category.filter.name"
+    icon: icons/filter.svg
+    fieldIds: [filterType, package, manufacturerModel, notes, quantity]
+    nfc: {code: 24, secondaryFieldId: filterType}
+  - id: other
+    name: "@i18n.category.other.name"
+    icon: icons/other.svg
+    fieldIds: [package, manufacturerModel, notes, quantity]
+    nfc: {code: 25, secondaryFieldId: package}

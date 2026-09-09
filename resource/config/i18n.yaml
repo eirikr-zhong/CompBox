@@ -1,0 +1,349 @@
+translations:
+  category.resistor.name: {zh: 电阻, en: Resistor}
+  category.capacitor.name: {zh: 电容, en: Capacitor}
+  category.diode.name: {zh: 二极管, en: Diode}
+  category.inductor.name: {zh: 电感, en: Inductor}
+  category.integrated-circuit.name: {zh: 集成电路, en: Integrated circuit}
+  category.connector.name: {zh: 连接器, en: Connector}
+  category.led.name: {zh: 发光二极管, en: Light-emitting diode}
+  category.transistor.name: {zh: 晶体管, en: Transistor}
+  category.crystal-oscillator.name: {zh: 晶体与振荡器, en: Crystals and oscillators}
+  category.relay.name: {zh: 继电器, en: Relay}
+  category.switch.name: {zh: 开关, en: Switch}
+  category.sensor.name: {zh: 传感器, en: Sensor}
+  category.transformer.name: {zh: 变压器, en: Transformer}
+  category.circuit-protection.name: {zh: 电路保护, en: Circuit protection}
+  category.optocoupler.name: {zh: 光耦与隔离器, en: Optocouplers and isolators}
+  category.potentiometer.name: {zh: 电位器, en: Potentiometer}
+  category.power-module.name: {zh: 电源模块, en: Power module}
+  category.battery.name: {zh: 电池与配件, en: Batteries and accessories}
+  category.motor-actuator.name: {zh: 电机与执行器, en: Motors and actuators}
+  category.audio.name: {zh: 音频元件, en: Audio component}
+  category.display.name: {zh: 显示器件, en: Display}
+  category.development-module.name: {zh: 开发板与模块, en: Development boards and modules}
+  category.rf-component.name: {zh: 射频与 RFID, en: RF and RFID}
+  category.filter.name: {zh: 滤波器, en: Filter}
+  category.other.name: {zh: 其他, en: Other}
+  category.resistor.value.10r: {zh: "10 Ω", en: "10 Ω"}
+  category.resistor.value.100r: {zh: "100 Ω", en: "100 Ω"}
+  category.resistor.value.1k: {zh: "1 kΩ", en: "1 kΩ"}
+  category.resistor.value.10k: {zh: "10 kΩ", en: "10 kΩ"}
+  category.resistor.value.100k: {zh: "100 kΩ", en: "100 kΩ"}
+  category.resistor.value.1m: {zh: "1 MΩ", en: "1 MΩ"}
+  valueSeries.e24: {zh: E24, en: E24}
+  valueSeries.e96: {zh: E96, en: E96}
+  valueSeries.e6: {zh: E6, en: E6}
+  valueSeries.e12: {zh: E12, en: E12}
+  unit.megaohm: {zh: 兆欧（MΩ）, en: Megaohm (MΩ)}
+  unit.kiloohm: {zh: 千欧（kΩ）, en: Kiloohm (kΩ)}
+  unit.ohm: {zh: 欧姆（Ω）, en: Ohm (Ω)}
+  unit.milliohm: {zh: 毫欧（mΩ）, en: Milliohm (mΩ)}
+  unit.farad: {zh: 法拉（F）, en: Farad (F)}
+  unit.millifarad: {zh: 毫法（mF）, en: Millifarad (mF)}
+  unit.microfarad: {zh: 微法（µF）, en: Microfarad (µF)}
+  unit.nanofarad: {zh: 纳法（nF）, en: Nanofarad (nF)}
+  unit.picofarad: {zh: 皮法（pF）, en: Picofarad (pF)}
+  unit.henry: {zh: 亨利（H）, en: Henry (H)}
+  unit.millihenry: {zh: 毫亨（mH）, en: Millihenry (mH)}
+  unit.microhenry: {zh: 微亨（µH）, en: Microhenry (µH)}
+  unit.nanohenry: {zh: 纳亨（nH）, en: Nanohenry (nH)}
+  category.capacitor.value.10pf: {zh: "10 pF", en: "10 pF"}
+  category.capacitor.value.100pf: {zh: "100 pF", en: "100 pF"}
+  category.capacitor.value.1nf: {zh: "1 nF", en: "1 nF"}
+  category.capacitor.value.10nf: {zh: "10 nF", en: "10 nF"}
+  category.capacitor.value.100nf: {zh: "100 nF", en: "100 nF"}
+  category.capacitor.value.1uf: {zh: "1 µF", en: "1 µF"}
+  category.capacitor.value.10uf: {zh: "10 µF", en: "10 µF"}
+  category.capacitor.value.100uf: {zh: "100 µF", en: "100 µF"}
+  category.inductor.value.1uh: {zh: "1 µH", en: "1 µH"}
+  category.inductor.value.10uh: {zh: "10 µH", en: "10 µH"}
+  category.inductor.value.22uh: {zh: "22 µH", en: "22 µH"}
+  category.inductor.value.100uh: {zh: "100 µH", en: "100 µH"}
+  category.inductor.value.1mh: {zh: "1 mH", en: "1 mH"}
+  category.inductor.value.10mh: {zh: "10 mH", en: "10 mH"}
+  field.value.label: {zh: 标称值, en: Nominal value}
+  field.tolerance.label: {zh: 精度, en: Tolerance}
+  field.manufacturerModel.label: {zh: "厂商 / 型号", en: "Manufacturer / model"}
+  field.notes.label: {zh: 备注, en: Notes}
+  field.package.label: {zh: 封装, en: Package}
+  field.connectorType.label: {zh: 连接器类型, en: Connector type}
+  field.ledColor.label: {zh: 发光颜色, en: Emitted color}
+  field.quantity.label: {zh: 数量, en: Quantity}
+  field.tolerance.0.01: {zh: "0.01%", en: "0.01%"}
+  field.tolerance.0.05: {zh: "0.05%", en: "0.05%"}
+  field.tolerance.0.1: {zh: "0.1%", en: "0.1%"}
+  field.tolerance.0.25: {zh: "0.25%", en: "0.25%"}
+  field.tolerance.0.5: {zh: "0.5%", en: "0.5%"}
+  field.tolerance.1: {zh: "1%", en: "1%"}
+  field.tolerance.2: {zh: "2%", en: "2%"}
+  field.tolerance.5: {zh: "5%", en: "5%"}
+  field.tolerance.10: {zh: "10%", en: "10%"}
+  field.tolerance.20: {zh: "20%", en: "20%"}
+  field.package.through-hole: {zh: 直插, en: Through-hole}
+  field.package.0603: {zh: "0603", en: "0603"}
+  field.package.0805: {zh: "0805", en: "0805"}
+  field.package.sop-8: {zh: SOP-8, en: SOP-8}
+  field.package.sot-23: {zh: SOT-23, en: SOT-23}
+  field.package.0402: {zh: "0402", en: "0402"}
+  field.package.1206: {zh: "1206", en: "1206"}
+  field.package.1210: {zh: "1210", en: "1210"}
+  field.package.2512: {zh: "2512", en: "2512"}
+  field.package.dip: {zh: DIP, en: DIP}
+  field.package.soic: {zh: SOIC, en: SOIC}
+  field.package.tssop: {zh: TSSOP, en: TSSOP}
+  field.package.qfn: {zh: QFN, en: QFN}
+  field.package.qfp: {zh: QFP, en: QFP}
+  field.package.bga: {zh: BGA, en: BGA}
+  field.package.to-92: {zh: TO-92, en: TO-92}
+  field.package.to-220: {zh: TO-220, en: TO-220}
+  field.package.to-247: {zh: TO-247, en: TO-247}
+  field.package.sma: {zh: SMA, en: SMA}
+  field.package.smb: {zh: SMB, en: SMB}
+  field.package.smc: {zh: SMC, en: SMC}
+  field.package.do-35: {zh: DO-35, en: DO-35}
+  field.package.do-41: {zh: DO-41, en: DO-41}
+  field.package.radial: {zh: 径向, en: Radial}
+  field.package.axial: {zh: 轴向, en: Axial}
+  field.connectorType.usb-c: {zh: USB-C, en: USB-C}
+  field.connectorType.pin-header: {zh: 排针, en: Pin header}
+  field.connectorType.terminal: {zh: 接线端子, en: Terminal}
+  field.connectorType.usb-a: {zh: USB-A, en: USB-A}
+  field.connectorType.usb-b: {zh: USB-B, en: USB-B}
+  field.connectorType.micro-usb: {zh: Micro USB, en: Micro USB}
+  field.connectorType.jst: {zh: JST 连接器, en: JST connector}
+  field.connectorType.dupont: {zh: 杜邦连接器, en: Dupont connector}
+  field.connectorType.dc-barrel: {zh: DC 圆孔电源连接器, en: DC barrel connector}
+  field.connectorType.coaxial: {zh: 射频同轴连接器, en: RF coaxial connector}
+  field.connectorType.card-socket: {zh: 卡座, en: Card socket}
+  field.connectorType.audio: {zh: 音频连接器, en: Audio connector}
+  field.connectorType.board-to-board: {zh: 板对板连接器, en: Board-to-board connector}
+  field.connectorType.ffc-fpc: {zh: FFC / FPC 连接器, en: FFC / FPC connector}
+  field.connectorType.d-sub: {zh: D-Sub 连接器, en: D-Sub connector}
+  field.ledColor.red: {zh: 红色, en: Red}
+  field.ledColor.green: {zh: 绿色, en: Green}
+  field.ledColor.blue: {zh: 蓝色, en: Blue}
+  field.ledColor.white: {zh: 白色, en: White}
+  field.resistorType.label: {zh: 电阻类型, en: Resistor type}
+  field.resistorType.chip: {zh: 贴片电阻, en: Chip resistor}
+  field.resistorType.through-hole: {zh: 通孔电阻, en: Through-hole resistor}
+  field.resistorType.network-array: {zh: 电阻网络 / 阵列, en: Resistor network / array}
+  field.resistorType.power: {zh: 功率电阻, en: Power resistor}
+  field.resistorType.current-sense: {zh: 采样电阻, en: Current-sense resistor}
+  field.resistorType.thermistor-ntc: {zh: NTC 热敏电阻, en: NTC thermistor}
+  field.resistorType.thermistor-ptc: {zh: PTC 热敏电阻, en: PTC thermistor}
+  field.resistorType.photoresistor: {zh: 光敏电阻, en: Photoresistor}
+  field.resistorType.varistor: {zh: 压敏电阻, en: Varistor}
+  field.capacitorType.label: {zh: 电容类型, en: Capacitor type}
+  field.capacitorType.ceramic: {zh: 陶瓷电容, en: Ceramic capacitor}
+  field.capacitorType.aluminum-electrolytic: {zh: 铝电解电容, en: Aluminum electrolytic capacitor}
+  field.capacitorType.tantalum: {zh: 钽电容, en: Tantalum capacitor}
+  field.capacitorType.film: {zh: 薄膜电容, en: Film capacitor}
+  field.capacitorType.supercapacitor: {zh: 超级电容, en: Supercapacitor}
+  field.capacitorType.mica-ptfe: {zh: 云母 / PTFE 电容, en: Mica / PTFE capacitor}
+  field.capacitorType.trimmer-variable: {zh: 微调 / 可变电容, en: Trimmer / variable capacitor}
+  field.capacitorType.aluminum-polymer: {zh: 铝聚合物电容, en: Aluminum polymer capacitor}
+  field.capacitorType.tantalum-polymer: {zh: 钽聚合物电容, en: Tantalum polymer capacitor}
+  field.capacitorType.niobium-oxide: {zh: 氧化铌电容, en: Niobium oxide capacitor}
+  field.capacitorType.silicon: {zh: 硅电容, en: Silicon capacitor}
+  field.capacitorType.network-array: {zh: 电容网络 / 阵列, en: Capacitor network / array}
+  field.diodeType.label: {zh: 二极管类型, en: Diode type}
+  field.diodeType.rectifier: {zh: 整流二极管, en: Rectifier diode}
+  field.diodeType.switching: {zh: 开关二极管, en: Switching diode}
+  field.diodeType.schottky: {zh: 肖特基二极管, en: Schottky diode}
+  field.diodeType.zener: {zh: 齐纳二极管, en: Zener diode}
+  field.diodeType.tvs: {zh: TVS 二极管, en: TVS diode}
+  field.diodeType.bridge-rectifier: {zh: 桥式整流器, en: Bridge rectifier}
+  field.diodeType.photodiode: {zh: 光电二极管, en: Photodiode}
+  field.diodeType.varactor: {zh: 变容二极管, en: Varactor diode}
+  field.diodeType.rf: {zh: 射频二极管, en: RF diode}
+  field.diodeType.diode-array: {zh: 二极管阵列, en: Diode array}
+  field.inductorType.label: {zh: 电感类型, en: Inductor type}
+  field.inductorType.fixed: {zh: 固定电感, en: Fixed inductor}
+  field.inductorType.power: {zh: 功率电感, en: Power inductor}
+  field.inductorType.adjustable: {zh: 可调电感, en: Adjustable inductor}
+  field.inductorType.common-mode-choke: {zh: 共模扼流圈, en: Common-mode choke}
+  field.inductorType.ferrite-bead: {zh: 磁珠, en: Ferrite bead}
+  field.inductorType.rf: {zh: 射频电感, en: RF inductor}
+  field.inductorType.wireless-charging-coil: {zh: 无线充电线圈, en: Wireless charging coil}
+  field.integratedCircuitType.label: {zh: IC 类型, en: IC type}
+  field.integratedCircuitType.microcontroller: {zh: 微控制器（MCU）, en: Microcontroller (MCU)}
+  field.integratedCircuitType.microprocessor-soc: {zh: 微处理器 / SoC, en: Microprocessor / SoC}
+  field.integratedCircuitType.analog-amplifier: {zh: 模拟 / 放大器, en: Analog / amplifier}
+  field.integratedCircuitType.logic: {zh: 逻辑器件, en: Logic}
+  field.integratedCircuitType.memory: {zh: 存储器, en: Memory}
+  field.integratedCircuitType.power-management: {zh: 电源管理（PMIC）, en: Power management (PMIC)}
+  field.integratedCircuitType.voltage-regulator: {zh: 稳压器, en: Voltage regulator}
+  field.integratedCircuitType.interface: {zh: 接口芯片, en: Interface IC}
+  field.integratedCircuitType.driver: {zh: 驱动器, en: Driver}
+  field.integratedCircuitType.data-converter: {zh: ADC / DAC 数据转换器, en: ADC / DAC data converter}
+  field.integratedCircuitType.clock-timing: {zh: 时钟 / 计时, en: Clock / timing}
+  field.integratedCircuitType.fpga-cpld: {zh: FPGA / CPLD, en: FPGA / CPLD}
+  field.integratedCircuitType.dsp: {zh: 数字信号处理器（DSP）, en: Digital signal processor (DSP)}
+  field.integratedCircuitType.sensor-interface: {zh: 传感器接口, en: Sensor interface}
+  field.integratedCircuitType.dedicated: {zh: 专用 IC, en: Application-specific IC}
+  field.ledType.label: {zh: LED 类型, en: LED type}
+  field.ledType.discrete: {zh: 分立指示 LED, en: Discrete indicator LED}
+  field.ledType.rgb: {zh: RGB LED, en: RGB LED}
+  field.ledType.addressable: {zh: 可寻址 LED, en: Addressable LED}
+  field.ledType.infrared: {zh: 红外 LED, en: Infrared LED}
+  field.ledType.ultraviolet: {zh: 紫外 LED, en: Ultraviolet LED}
+  field.ledType.high-power: {zh: 大功率 LED, en: High-power LED}
+  field.ledType.cob-module: {zh: COB / 照明模块, en: COB / lighting module}
+  field.ledType.numeric-dot-matrix: {zh: 数码管 / 点阵, en: Numeric / dot-matrix display}
+  field.transistorType.label: {zh: 晶体管类型, en: Transistor type}
+  field.transistorType.bjt-npn: {zh: NPN 双极晶体管, en: NPN BJT}
+  field.transistorType.bjt-pnp: {zh: PNP 双极晶体管, en: PNP BJT}
+  field.transistorType.n-mosfet: {zh: N 沟道 MOSFET, en: N-channel MOSFET}
+  field.transistorType.p-mosfet: {zh: P 沟道 MOSFET, en: P-channel MOSFET}
+  field.transistorType.jfet: {zh: JFET, en: JFET}
+  field.transistorType.igbt: {zh: IGBT, en: IGBT}
+  field.transistorType.darlington: {zh: 达林顿晶体管, en: Darlington transistor}
+  field.transistorType.transistor-array: {zh: 晶体管阵列, en: Transistor array}
+  field.transistorType.rf-transistor: {zh: 射频晶体管, en: RF transistor}
+  field.oscillatorType.label: {zh: 晶振类型, en: Crystal / oscillator type}
+  field.oscillatorType.crystal: {zh: 石英晶体, en: Quartz crystal}
+  field.oscillatorType.oscillator: {zh: 有源振荡器, en: Oscillator}
+  field.oscillatorType.ceramic-resonator: {zh: 陶瓷谐振器, en: Ceramic resonator}
+  field.oscillatorType.programmable-oscillator: {zh: 可编程振荡器, en: Programmable oscillator}
+  field.oscillatorType.tcxo: {zh: 温补晶振（TCXO）, en: TCXO}
+  field.oscillatorType.vcxo: {zh: 压控晶振（VCXO）, en: VCXO}
+  field.oscillatorType.vco: {zh: 压控振荡器（VCO）, en: VCO}
+  field.oscillatorType.rtc-crystal: {zh: RTC 32.768 kHz 晶体, en: RTC 32.768 kHz crystal}
+  field.relayType.label: {zh: 继电器类型, en: Relay type}
+  field.relayType.signal: {zh: 信号继电器, en: Signal relay}
+  field.relayType.power: {zh: 功率继电器, en: Power relay}
+  field.relayType.solid-state: {zh: 固态继电器, en: Solid-state relay}
+  field.relayType.reed: {zh: 簧片继电器, en: Reed relay}
+  field.relayType.latching: {zh: 磁保持继电器, en: Latching relay}
+  field.relayType.automotive: {zh: 汽车继电器, en: Automotive relay}
+  field.relayType.rf: {zh: 射频继电器, en: RF relay}
+  field.relayType.contactor: {zh: 接触器, en: Contactor}
+  field.switchType.label: {zh: 开关类型, en: Switch type}
+  field.switchType.tactile: {zh: 轻触开关, en: Tactile switch}
+  field.switchType.push-button: {zh: 按钮开关, en: Push-button switch}
+  field.switchType.toggle: {zh: 拨动开关, en: Toggle switch}
+  field.switchType.slide: {zh: 滑动开关, en: Slide switch}
+  field.switchType.rotary: {zh: 旋转开关, en: Rotary switch}
+  field.switchType.dip: {zh: DIP 开关, en: DIP switch}
+  field.switchType.rocker: {zh: 船型开关, en: Rocker switch}
+  field.switchType.microswitch-limit: {zh: 微动 / 限位开关, en: Microswitch / limit switch}
+  field.switchType.reed: {zh: 磁簧开关, en: Reed switch}
+  field.switchType.encoder: {zh: 编码器, en: Encoder}
+  field.sensorType.label: {zh: 传感器类型, en: Sensor type}
+  field.sensorType.temperature: {zh: 温度传感器, en: Temperature sensor}
+  field.sensorType.humidity: {zh: 湿度传感器, en: Humidity sensor}
+  field.sensorType.pressure: {zh: 压力传感器, en: Pressure sensor}
+  field.sensorType.light-color: {zh: 光线 / 颜色传感器, en: Light / color sensor}
+  field.sensorType.proximity-distance: {zh: 接近 / 测距传感器, en: Proximity / distance sensor}
+  field.sensorType.motion-imu: {zh: 运动 / IMU 传感器, en: Motion / IMU sensor}
+  field.sensorType.magnetic-hall: {zh: 磁性 / 霍尔传感器, en: Magnetic / Hall sensor}
+  field.sensorType.current-voltage: {zh: 电流 / 电压传感器, en: Current / voltage sensor}
+  field.sensorType.gas-air-quality: {zh: 气体 / 空气质量传感器, en: Gas / air-quality sensor}
+  field.sensorType.force-strain: {zh: 力 / 应变传感器, en: Force / strain sensor}
+  field.sensorType.sound: {zh: 声音传感器, en: Sound sensor}
+  field.sensorType.touch: {zh: 触摸传感器, en: Touch sensor}
+  field.sensorType.image-camera: {zh: 图像 / 摄像头传感器, en: Image / camera sensor}
+  field.sensorType.liquid-level-flow: {zh: 液位 / 流量传感器, en: Liquid-level / flow sensor}
+  field.transformerType.label: {zh: 变压器类型, en: Transformer type}
+  field.transformerType.power: {zh: 电源变压器, en: Power transformer}
+  field.transformerType.current: {zh: 电流互感器, en: Current transformer}
+  field.transformerType.pulse: {zh: 脉冲变压器, en: Pulse transformer}
+  field.transformerType.audio: {zh: 音频变压器, en: Audio transformer}
+  field.transformerType.isolation: {zh: 隔离 / 自耦变压器, en: Isolation / autotransformer}
+  field.transformerType.smps: {zh: 开关电源变压器, en: SMPS transformer}
+  field.transformerType.rf-balun: {zh: 射频变压器 / 巴伦, en: RF transformer / balun}
+  field.protectionType.label: {zh: 保护器件类型, en: Protection device type}
+  field.protectionType.fuse: {zh: 保险丝, en: Fuse}
+  field.protectionType.resettable-fuse: {zh: PTC 可恢复保险丝, en: Resettable PTC fuse}
+  field.protectionType.thermal-fuse: {zh: 温度保险丝, en: Thermal fuse}
+  field.protectionType.fuse-holder: {zh: 保险丝座, en: Fuse holder}
+  field.protectionType.tvs-diode: {zh: TVS 二极管, en: TVS diode}
+  field.protectionType.mov-varistor: {zh: MOV 压敏电阻, en: MOV varistor}
+  field.protectionType.gas-discharge-tube: {zh: 气体放电管, en: Gas discharge tube}
+  field.protectionType.circuit-breaker: {zh: 断路器, en: Circuit breaker}
+  field.protectionType.inrush-current-limiter: {zh: 浪涌电流限制器, en: Inrush current limiter}
+  field.protectionType.surge-protection-ic: {zh: 浪涌保护 IC, en: Surge-protection IC}
+  field.optocouplerType.label: {zh: 隔离器类型, en: Isolator type}
+  field.optocouplerType.phototransistor: {zh: 光电晶体管输出光耦, en: Phototransistor optocoupler}
+  field.optocouplerType.logic-output: {zh: 逻辑输出光耦, en: Logic-output optocoupler}
+  field.optocouplerType.triac-scr: {zh: TRIAC / SCR 输出光耦, en: TRIAC / SCR optocoupler}
+  field.optocouplerType.gate-driver: {zh: 隔离栅极驱动器, en: Isolated gate driver}
+  field.optocouplerType.linear: {zh: 线性光耦, en: Linear optocoupler}
+  field.optocouplerType.digital-isolator: {zh: 数字隔离器, en: Digital isolator}
+  field.potentiometerType.label: {zh: 电位器类型, en: Potentiometer type}
+  field.potentiometerType.rotary: {zh: 旋转电位器, en: Rotary potentiometer}
+  field.potentiometerType.slide: {zh: 滑动电位器, en: Slide potentiometer}
+  field.potentiometerType.trimmer: {zh: 微调电位器, en: Trimmer potentiometer}
+  field.potentiometerType.thumbwheel: {zh: 拨轮电位器, en: Thumbwheel potentiometer}
+  field.potentiometerType.digital: {zh: 数字电位器, en: Digital potentiometer}
+  field.potentiometerType.joystick: {zh: 操纵杆电位器, en: Joystick potentiometer}
+  field.potentiometerType.rheostat: {zh: 变阻器 / 功率电位器, en: Rheostat / power potentiometer}
+  field.powerModuleType.label: {zh: 电源类型, en: Power module type}
+  field.powerModuleType.ac-dc: {zh: AC-DC 模块, en: AC-DC module}
+  field.powerModuleType.dc-dc: {zh: DC-DC 模块, en: DC-DC module}
+  field.powerModuleType.linear-regulator-module: {zh: 线性稳压模块, en: Linear regulator module}
+  field.powerModuleType.buck: {zh: 降压模块, en: Buck module}
+  field.powerModuleType.boost: {zh: 升压模块, en: Boost module}
+  field.powerModuleType.buck-boost: {zh: 升降压模块, en: Buck-boost module}
+  field.powerModuleType.led-driver: {zh: LED 驱动电源, en: LED driver}
+  field.powerModuleType.battery-charger: {zh: 电池充电模块, en: Battery charger module}
+  field.powerModuleType.poe: {zh: PoE 电源模块, en: PoE power module}
+  field.batteryType.label: {zh: 电池类型, en: Battery type}
+  field.batteryType.primary-cell: {zh: 一次电池, en: Primary cell}
+  field.batteryType.rechargeable-cell: {zh: 充电电池, en: Rechargeable cell}
+  field.batteryType.battery-pack: {zh: 电池组, en: Battery pack}
+  field.batteryType.coin-cell: {zh: 纽扣电池, en: Coin cell}
+  field.batteryType.holder-clip: {zh: 电池座 / 触点, en: Battery holder / contact}
+  field.batteryType.protection-board: {zh: 电池保护板, en: Battery protection board}
+  field.motorType.label: {zh: 电机 / 执行器类型, en: Motor / actuator type}
+  field.motorType.dc-motor: {zh: 直流电机, en: DC motor}
+  field.motorType.ac-motor: {zh: 交流电机, en: AC motor}
+  field.motorType.stepper-motor: {zh: 步进电机, en: Stepper motor}
+  field.motorType.servo: {zh: 舵机 / 伺服电机, en: Servo motor}
+  field.motorType.solenoid: {zh: 电磁铁 / 螺线管, en: Solenoid}
+  field.motorType.linear-actuator: {zh: 线性执行器, en: Linear actuator}
+  field.motorType.driver-module: {zh: 电机驱动模块, en: Motor driver module}
+  field.audioType.label: {zh: 音频元件类型, en: Audio component type}
+  field.audioType.speaker: {zh: 扬声器, en: Speaker}
+  field.audioType.buzzer: {zh: 蜂鸣器 / 警报器, en: Buzzer / alarm}
+  field.audioType.microphone: {zh: 麦克风, en: Microphone}
+  field.audioType.piezo-element: {zh: 压电元件, en: Piezo element}
+  field.audioType.audio-module: {zh: 音频模块, en: Audio module}
+  field.displayType.label: {zh: 显示器类型, en: Display type}
+  field.displayType.lcd: {zh: LCD 显示屏, en: LCD display}
+  field.displayType.oled: {zh: OLED 显示屏, en: OLED display}
+  field.displayType.e-paper: {zh: 电子纸, en: E-paper display}
+  field.displayType.seven-segment: {zh: 数码管, en: Seven-segment display}
+  field.displayType.led-matrix: {zh: LED 点阵 / 灯条, en: LED matrix / bar}
+  field.displayType.vfd: {zh: VFD 显示屏, en: VFD display}
+  field.displayType.touch-panel: {zh: 触摸屏 / 触控面板, en: Touchscreen / touch panel}
+  field.moduleType.label: {zh: 模块类型, en: Module type}
+  field.moduleType.mcu-development-board: {zh: MCU 开发板, en: MCU development board}
+  field.moduleType.single-board-computer: {zh: 单板计算机（SBC）, en: Single-board computer (SBC)}
+  field.moduleType.fpga-cpld-board: {zh: FPGA / CPLD 开发板, en: FPGA / CPLD board}
+  field.moduleType.sensor-module: {zh: 传感器模块, en: Sensor module}
+  field.moduleType.communication-module: {zh: 通信模块, en: Communication module}
+  field.moduleType.display-module: {zh: 显示模块, en: Display module}
+  field.moduleType.programmer-debugger: {zh: 编程器 / 调试器, en: Programmer / debugger}
+  field.moduleType.expansion-board: {zh: 扩展板 / 子卡, en: Expansion board / daughter card}
+  field.rfType.label: {zh: 射频器件类型, en: RF component type}
+  field.rfType.antenna: {zh: 天线, en: Antenna}
+  field.rfType.amplifier: {zh: 射频放大器, en: RF amplifier}
+  field.rfType.mixer: {zh: 混频器, en: Mixer}
+  field.rfType.switch: {zh: 射频开关, en: RF switch}
+  field.rfType.transceiver-module: {zh: 射频收发模块, en: RF transceiver module}
+  field.rfType.receiver-transmitter: {zh: 接收器 / 发射器, en: Receiver / transmitter}
+  field.rfType.attenuator: {zh: 衰减器, en: Attenuator}
+  field.rfType.coupler-divider: {zh: 耦合器 / 功分器, en: Coupler / power divider}
+  field.rfType.rfid: {zh: RFID 器件, en: RFID component}
+  field.rfType.shield: {zh: 射频屏蔽件, en: RF shield}
+  field.filterType.label: {zh: 滤波器类型, en: Filter type}
+  field.filterType.emi-rfi: {zh: EMI / RFI 滤波器, en: EMI / RFI filter}
+  field.filterType.common-mode-choke: {zh: 共模扼流圈, en: Common-mode choke}
+  field.filterType.ferrite-bead-core: {zh: 磁珠 / 磁芯, en: Ferrite bead / core}
+  field.filterType.saw: {zh: SAW 滤波器, en: SAW filter}
+  field.filterType.ceramic: {zh: 陶瓷滤波器, en: Ceramic filter}
+  field.filterType.crystal: {zh: 晶体滤波器, en: Crystal filter}
+  field.filterType.rf: {zh: 射频滤波器, en: RF filter}
+  field.filterType.power-line: {zh: 电源线滤波器, en: Power-line filter}
+  field.filterType.feedthrough-capacitor: {zh: 穿心电容, en: Feedthrough capacitor}

@@ -6,18 +6,114 @@
   "scanTooltip": "扫码",
   "scanInProgress": "扫码功能设计中",
   "myComponents": "我的元器件",
+  "allCategories": "全部类别",
+  "emptyInventoryTitle": "还没有元器件记录",
+  "emptyInventoryDescription": "扫描 NFC 标签后可新建第一条记录。",
+  "noMatchingComponents": "没有匹配的元器件",
+  "noMatchingComponentsDescription": "请调整搜索内容或类别筛选。",
+  "resourceLoadError": "无法加载本地资源配置。",
   "location": "位置",
   "quantity": "数量",
+  "inventory": "库存",
   "quantityValue": "{quantity} 个",
   "@quantityValue": {
     "placeholders": {
       "quantity": { "type": "String" }
     }
   },
-  "home": "首页",
-  "profile": "我的",
+  "home": "主页",
+  "profile": "设置",
   "nfcScan": "NFC 扫描",
   "nfcPreparing": "正在准备 NFC 扫描",
+  "nfcTitle": "NFC",
+  "nfcScanningTitle": "NFC 扫描中",
+  "nfcScanning": "扫描中",
+  "nfcScanInstruction": "请将手机背面靠近 NFC 标签",
+  "nfcReadyToScan": "准备扫描 NFC 标签",
+  "nfcScanTag": "扫描标签",
+  "nfcRescan": "重新扫描标签",
+  "nfcWriteTag": "重新扫描并写入标签",
+  "nfcError": "NFC 操作失败",
+  "nfcUnavailable": "此设备不支持 NFC。",
+  "nfcDisabled": "NFC 已关闭，请先在系统设置中开启。",
+  "nfcUnsupportedTag": "此标签不支持 NDEF。",
+  "nfcReadOnly": "此 NFC 标签为只读，无法写入。",
+  "nfcCapacityError": "标签容量不足，无法写入此快照。",
+  "nfcPayloadTooLarge": "快照共 {bytes} 字节，超过标签保守上限 {limit} 字节。",
+  "@nfcPayloadTooLarge": {
+    "placeholders": {
+      "bytes": { "type": "String" },
+      "limit": { "type": "String" }
+    }
+  },
+  "nfcUidMismatch": "重新扫描的标签与当前编辑的标签不一致。",
+  "nfcCrcError": "标签快照校验失败，数据可能已损坏。",
+  "nfcUnknownProtocol": "标签不包含可识别的 CompBox 快照。",
+  "nfcUnsupportedVersion": "此标签使用了不支持的 CompBox 快照版本。",
+  "nfcInvalidSnapshot": "标签快照格式无效。",
+  "nfcNeedsInitialization": "请先初始化此标签，再用于芯盒。",
+  "nfcReinitializeTag": "此标签使用旧版芯盒格式，请重新初始化后再使用。",
+  "nfcSlotSelectionTitle": "选择格子",
+  "nfcFinishEditing": "完成编辑",
+  "nfcSaveAll": "保存全部格子",
+  "nfcClearTag": "清空标签",
+  "nfcClearTagDialogDescription": "请将手机背面靠近 NFC 标签，完成清空。",
+  "nfcClearTagSuccess": "NFC 标签已清空",
+  "nfcSlotEmpty": "空",
+  "nfcSlotLabel": "第 {index} 格",
+  "@nfcSlotLabel": {
+    "placeholders": {
+      "index": { "type": "String" }
+    }
+  },
+  "nfcCustomTextTooLong": "自定义文本过长，无法写入标签。",
+  "nfcReadFailed": "无法读取此 NFC 标签，请重试。",
+  "nfcWriteFailed": "无法写入此 NFC 标签，请重试。",
+  "nfcTagOverridesLocalTitle": "以标签记录覆盖本地记录？",
+  "nfcTagOverridesLocalDescription": "库位 {location} 的本地副本与标签不一致。确认后将以标签内容覆盖本地副本。",
+  "@nfcTagOverridesLocalDescription": {
+    "placeholders": {
+      "location": { "type": "String" }
+    }
+  },
+  "nfcTagRead": "NFC 标签已读取",
+  "nfcRead": "已读取",
+  "nfcTagReadDescription": "标签信息已读取，可编辑入库信息",
+  "componentName": "元器件名称",
+  "componentNameHint": "请输入元器件名称",
+  "modelSpecification": "型号 / 规格",
+  "modelSpecificationHint": "请输入型号或规格",
+  "decreaseQuantity": "减少数量",
+  "increaseQuantity": "增加数量",
+  "save": "保存",
+  "nfcSaveDialogTitle": "扫描标签保存",
+  "nfcSaveDialogDescription": "请将手机背面靠近 NFC 标签，完成保存。",
+  "cancel": "取消",
+  "requiredField": "请填写 {field}",
+  "@requiredField": {
+    "placeholders": {
+      "field": { "type": "String" }
+    }
+  },
+  "invalidInteger": "请输入整数",
+  "invalidNumber": "请输入有效数值",
+  "invalidLocation": "请输入 A-01-03 格式的库位（编号 1–255）",
+  "insufficientStock": "出库数量不能超过当前库存",
+  "currentQuantityValue": "当前库存：{quantity}",
+  "@currentQuantityValue": {
+    "placeholders": {
+      "quantity": { "type": "String" }
+    }
+  },
+  "recordSaved": "记录已保存",
+  "overwriteRecordTitle": "覆盖已有记录？",
+  "overwriteRecordDescription": "位置 {location} 已有记录。确认后将使用表单中的完整数据覆盖它。",
+  "@overwriteRecordDescription": {
+    "placeholders": {
+      "location": { "type": "String" }
+    }
+  },
+  "overwrite": "覆盖",
   "componentDetail": "元器件详情",
   "inventoryInformation": "库存信息",
   "specificationInformation": "规格信息",
@@ -45,7 +141,7 @@
   "specTimer": "SOP-8",
   "specConnector": "Type-C 16P 板上型",
   "specLed": "直插 LED",
-  "profileTitle": "我的",
+  "profileTitle": "设置",
   "profileMonogram": "芯",
   "prototypeAccount": "芯盒 设计账号",
   "prototypeOnly": "设计期数据，仅作原型演示",
@@ -53,7 +149,52 @@
   "componentStat": "元器件",
   "stockTotal": "库存总数",
   "locationStat": "库位",
+  "initializeTagSection": "NFC 标签",
+  "initializeTagTitle": "初始化 NFC 标签",
+  "initializeTagDescription": "在 NFC 标签上创建 1×N 芯盒容器。",
+  "initializeTagColumns": "格数",
+  "initializeTagLayout": "1×{columns}",
+  "@initializeTagLayout": {
+    "placeholders": {
+      "columns": { "type": "String" }
+    }
+  },
+  "initializeTagAction": "初始化",
+  "initializeTagConfirmation": "初始化会清空标签中的所有原有内容，包括旧版芯盒记录和无法识别的 NDEF 数据。",
+  "initializeTagFirstScan": "请将标签靠近手机，检查标签状态。",
+  "initializeTagSecondScan": "请再次将同一标签靠近手机，完成初始化。",
+  "initializeTagSuccess": "NFC 标签已初始化",
   "settings": "设置",
   "preferences": "偏好设置",
-  "settingsInProgress": "设置功能设计中"
+  "settingsInProgress": "设置功能设计中",
+  "exportDatabase": "导出数据库",
+  "exportDatabaseSuccess": "已导出 {count} 条元器件记录",
+  "@exportDatabaseSuccess": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "exportDatabaseFailed": "无法导出数据库，请重试",
+  "importDatabase": "导入数据库",
+  "importDatabaseConfirmation": "备份中包含 {count} 条记录。继续后将覆盖当前本地数据库，此操作无法撤销。NFC 标签内容不会受到影响。",
+  "@importDatabaseConfirmation": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "confirmImportDatabase": "确认导入",
+  "importDatabaseSuccess": "已导入 {count} 条元器件记录",
+  "@importDatabaseSuccess": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "invalidBackupFile": "所选文件不是有效的芯盒备份",
+  "importDatabaseFailed": "无法导入数据库，请重试",
+  "clearDatabase": "清空数据库",
+  "clearDatabaseConfirmation": "此操作无法恢复。本地保存的全部元器件记录将被永久删除，NFC 标签内容不会受到影响。",
+  "confirmClearDatabase": "确认清空",
+  "clearDatabaseSuccess": "本地数据库已清空",
+  "delete": "删除",
+  "recordDeleted": "记录已删除"
 }

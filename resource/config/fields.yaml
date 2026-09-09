@@ -1,0 +1,716 @@
+fields:
+  - id: value
+    type: decimal
+    label: "@i18n.field.value.label"
+    required: true
+    nfc: {code: 1, role: value}
+  - id: tolerance
+    type: decimal
+    valueType: percentage
+    label: "@i18n.field.tolerance.label"
+    required: false
+    nfc:
+      code: 2
+      role: tolerance
+      dictionary:
+        - {id: "0.01", code: 1, label: "@i18n.field.tolerance.0.01"}
+        - {id: "0.05", code: 2, label: "@i18n.field.tolerance.0.05"}
+        - {id: "0.1", code: 3, label: "@i18n.field.tolerance.0.1"}
+        - {id: "0.25", code: 4, label: "@i18n.field.tolerance.0.25"}
+        - {id: "0.5", code: 5, label: "@i18n.field.tolerance.0.5"}
+        - {id: "1", code: 6, label: "@i18n.field.tolerance.1"}
+        - {id: "2", code: 7, label: "@i18n.field.tolerance.2"}
+        - {id: "5", code: 8, label: "@i18n.field.tolerance.5"}
+        - {id: "10", code: 9, label: "@i18n.field.tolerance.10"}
+        - {id: "20", code: 10, label: "@i18n.field.tolerance.20"}
+  - id: manufacturerModel
+    type: text
+    label: "@i18n.field.manufacturerModel.label"
+    required: false
+    nfc: {code: 4, role: text}
+  - id: notes
+    type: text
+    label: "@i18n.field.notes.label"
+    required: false
+    nfc: {code: 5, role: text}
+  - id: package
+    type: text
+    label: "@i18n.field.package.label"
+    required: false
+    nfc:
+      code: 3
+      role: secondary
+      dictionary:
+        - {id: through-hole, code: 1, label: "@i18n.field.package.through-hole"}
+        - {id: "0603", code: 2, label: "@i18n.field.package.0603"}
+        - {id: "0805", code: 3, label: "@i18n.field.package.0805"}
+        - {id: sop-8, code: 4, label: "@i18n.field.package.sop-8"}
+        - {id: sot-23, code: 5, label: "@i18n.field.package.sot-23"}
+        - {id: "0402", code: 6, label: "@i18n.field.package.0402"}
+        - {id: "1206", code: 7, label: "@i18n.field.package.1206"}
+        - {id: "1210", code: 8, label: "@i18n.field.package.1210"}
+        - {id: "2512", code: 9, label: "@i18n.field.package.2512"}
+        - {id: dip, code: 10, label: "@i18n.field.package.dip"}
+        - {id: soic, code: 11, label: "@i18n.field.package.soic"}
+        - {id: tssop, code: 12, label: "@i18n.field.package.tssop"}
+        - {id: qfn, code: 13, label: "@i18n.field.package.qfn"}
+        - {id: qfp, code: 14, label: "@i18n.field.package.qfp"}
+        - {id: bga, code: 15, label: "@i18n.field.package.bga"}
+        - {id: to-92, code: 16, label: "@i18n.field.package.to-92"}
+        - {id: to-220, code: 17, label: "@i18n.field.package.to-220"}
+        - {id: to-247, code: 18, label: "@i18n.field.package.to-247"}
+        - {id: sma, code: 19, label: "@i18n.field.package.sma"}
+        - {id: smb, code: 20, label: "@i18n.field.package.smb"}
+        - {id: smc, code: 21, label: "@i18n.field.package.smc"}
+        - {id: do-35, code: 22, label: "@i18n.field.package.do-35"}
+        - {id: do-41, code: 23, label: "@i18n.field.package.do-41"}
+        - {id: radial, code: 24, label: "@i18n.field.package.radial"}
+        - {id: axial, code: 25, label: "@i18n.field.package.axial"}
+  - id: connectorType
+    type: text
+    label: "@i18n.field.connectorType.label"
+    required: true
+    nfc:
+      code: 6
+      role: secondary
+      dictionary:
+        - {id: usb-c, code: 1, label: "@i18n.field.connectorType.usb-c"}
+        - {id: pin-header, code: 2, label: "@i18n.field.connectorType.pin-header"}
+        - {id: terminal, code: 3, label: "@i18n.field.connectorType.terminal"}
+        - {id: usb-a, code: 4, label: "@i18n.field.connectorType.usb-a"}
+        - {id: usb-b, code: 5, label: "@i18n.field.connectorType.usb-b"}
+        - {id: micro-usb, code: 6, label: "@i18n.field.connectorType.micro-usb"}
+        - {id: jst, code: 7, label: "@i18n.field.connectorType.jst"}
+        - {id: dupont, code: 8, label: "@i18n.field.connectorType.dupont"}
+        - {id: dc-barrel, code: 9, label: "@i18n.field.connectorType.dc-barrel"}
+        - {id: coaxial, code: 10, label: "@i18n.field.connectorType.coaxial"}
+        - {id: card-socket, code: 11, label: "@i18n.field.connectorType.card-socket"}
+        - {id: audio, code: 12, label: "@i18n.field.connectorType.audio"}
+        - {id: board-to-board, code: 13, label: "@i18n.field.connectorType.board-to-board"}
+        - {id: ffc-fpc, code: 14, label: "@i18n.field.connectorType.ffc-fpc"}
+        - {id: d-sub, code: 15, label: "@i18n.field.connectorType.d-sub"}
+  - id: ledColor
+    type: text
+    label: "@i18n.field.ledColor.label"
+    required: true
+    nfc:
+      code: 7
+      role: secondary
+      dictionary:
+        - {id: red, code: 1, label: "@i18n.field.ledColor.red"}
+        - {id: green, code: 2, label: "@i18n.field.ledColor.green"}
+        - {id: blue, code: 3, label: "@i18n.field.ledColor.blue"}
+        - {id: white, code: 4, label: "@i18n.field.ledColor.white"}
+  - id: resistorType
+    type: enum
+    label: "@i18n.field.resistorType.label"
+    required: false
+    options:
+      - {id: chip, label: "@i18n.field.resistorType.chip"}
+      - {id: through-hole, label: "@i18n.field.resistorType.through-hole"}
+      - {id: network-array, label: "@i18n.field.resistorType.network-array"}
+      - {id: power, label: "@i18n.field.resistorType.power"}
+      - {id: current-sense, label: "@i18n.field.resistorType.current-sense"}
+      - {id: thermistor-ntc, label: "@i18n.field.resistorType.thermistor-ntc"}
+      - {id: thermistor-ptc, label: "@i18n.field.resistorType.thermistor-ptc"}
+      - {id: photoresistor, label: "@i18n.field.resistorType.photoresistor"}
+      - {id: varistor, label: "@i18n.field.resistorType.varistor"}
+    nfc:
+      code: 8
+      role: secondary
+      dictionary:
+        - {id: chip, code: 1, label: "@i18n.field.resistorType.chip"}
+        - {id: through-hole, code: 2, label: "@i18n.field.resistorType.through-hole"}
+        - {id: network-array, code: 3, label: "@i18n.field.resistorType.network-array"}
+        - {id: power, code: 4, label: "@i18n.field.resistorType.power"}
+        - {id: current-sense, code: 5, label: "@i18n.field.resistorType.current-sense"}
+        - {id: thermistor-ntc, code: 6, label: "@i18n.field.resistorType.thermistor-ntc"}
+        - {id: thermistor-ptc, code: 7, label: "@i18n.field.resistorType.thermistor-ptc"}
+        - {id: photoresistor, code: 8, label: "@i18n.field.resistorType.photoresistor"}
+        - {id: varistor, code: 9, label: "@i18n.field.resistorType.varistor"}
+  - id: capacitorType
+    type: enum
+    label: "@i18n.field.capacitorType.label"
+    required: false
+    options:
+      - {id: ceramic, label: "@i18n.field.capacitorType.ceramic"}
+      - {id: aluminum-electrolytic, label: "@i18n.field.capacitorType.aluminum-electrolytic"}
+      - {id: tantalum, label: "@i18n.field.capacitorType.tantalum"}
+      - {id: film, label: "@i18n.field.capacitorType.film"}
+      - {id: supercapacitor, label: "@i18n.field.capacitorType.supercapacitor"}
+      - {id: mica-ptfe, label: "@i18n.field.capacitorType.mica-ptfe"}
+      - {id: trimmer-variable, label: "@i18n.field.capacitorType.trimmer-variable"}
+      - {id: aluminum-polymer, label: "@i18n.field.capacitorType.aluminum-polymer"}
+      - {id: tantalum-polymer, label: "@i18n.field.capacitorType.tantalum-polymer"}
+      - {id: niobium-oxide, label: "@i18n.field.capacitorType.niobium-oxide"}
+      - {id: silicon, label: "@i18n.field.capacitorType.silicon"}
+      - {id: network-array, label: "@i18n.field.capacitorType.network-array"}
+    nfc:
+      code: 9
+      role: secondary
+      dictionary:
+        - {id: ceramic, code: 1, label: "@i18n.field.capacitorType.ceramic"}
+        - {id: aluminum-electrolytic, code: 2, label: "@i18n.field.capacitorType.aluminum-electrolytic"}
+        - {id: tantalum, code: 3, label: "@i18n.field.capacitorType.tantalum"}
+        - {id: film, code: 4, label: "@i18n.field.capacitorType.film"}
+        - {id: supercapacitor, code: 5, label: "@i18n.field.capacitorType.supercapacitor"}
+        - {id: mica-ptfe, code: 6, label: "@i18n.field.capacitorType.mica-ptfe"}
+        - {id: trimmer-variable, code: 7, label: "@i18n.field.capacitorType.trimmer-variable"}
+        - {id: aluminum-polymer, code: 8, label: "@i18n.field.capacitorType.aluminum-polymer"}
+        - {id: tantalum-polymer, code: 9, label: "@i18n.field.capacitorType.tantalum-polymer"}
+        - {id: niobium-oxide, code: 10, label: "@i18n.field.capacitorType.niobium-oxide"}
+        - {id: silicon, code: 11, label: "@i18n.field.capacitorType.silicon"}
+        - {id: network-array, code: 12, label: "@i18n.field.capacitorType.network-array"}
+  - id: diodeType
+    type: enum
+    label: "@i18n.field.diodeType.label"
+    required: false
+    options:
+      - {id: rectifier, label: "@i18n.field.diodeType.rectifier"}
+      - {id: switching, label: "@i18n.field.diodeType.switching"}
+      - {id: schottky, label: "@i18n.field.diodeType.schottky"}
+      - {id: zener, label: "@i18n.field.diodeType.zener"}
+      - {id: tvs, label: "@i18n.field.diodeType.tvs"}
+      - {id: bridge-rectifier, label: "@i18n.field.diodeType.bridge-rectifier"}
+      - {id: photodiode, label: "@i18n.field.diodeType.photodiode"}
+      - {id: varactor, label: "@i18n.field.diodeType.varactor"}
+      - {id: rf, label: "@i18n.field.diodeType.rf"}
+      - {id: diode-array, label: "@i18n.field.diodeType.diode-array"}
+    nfc:
+      code: 10
+      role: secondary
+      dictionary:
+        - {id: rectifier, code: 1, label: "@i18n.field.diodeType.rectifier"}
+        - {id: switching, code: 2, label: "@i18n.field.diodeType.switching"}
+        - {id: schottky, code: 3, label: "@i18n.field.diodeType.schottky"}
+        - {id: zener, code: 4, label: "@i18n.field.diodeType.zener"}
+        - {id: tvs, code: 5, label: "@i18n.field.diodeType.tvs"}
+        - {id: bridge-rectifier, code: 6, label: "@i18n.field.diodeType.bridge-rectifier"}
+        - {id: photodiode, code: 7, label: "@i18n.field.diodeType.photodiode"}
+        - {id: varactor, code: 8, label: "@i18n.field.diodeType.varactor"}
+        - {id: rf, code: 9, label: "@i18n.field.diodeType.rf"}
+        - {id: diode-array, code: 10, label: "@i18n.field.diodeType.diode-array"}
+  - id: inductorType
+    type: enum
+    label: "@i18n.field.inductorType.label"
+    required: false
+    options:
+      - {id: fixed, label: "@i18n.field.inductorType.fixed"}
+      - {id: power, label: "@i18n.field.inductorType.power"}
+      - {id: adjustable, label: "@i18n.field.inductorType.adjustable"}
+      - {id: common-mode-choke, label: "@i18n.field.inductorType.common-mode-choke"}
+      - {id: ferrite-bead, label: "@i18n.field.inductorType.ferrite-bead"}
+      - {id: rf, label: "@i18n.field.inductorType.rf"}
+      - {id: wireless-charging-coil, label: "@i18n.field.inductorType.wireless-charging-coil"}
+    nfc:
+      code: 11
+      role: secondary
+      dictionary:
+        - {id: fixed, code: 1, label: "@i18n.field.inductorType.fixed"}
+        - {id: power, code: 2, label: "@i18n.field.inductorType.power"}
+        - {id: adjustable, code: 3, label: "@i18n.field.inductorType.adjustable"}
+        - {id: common-mode-choke, code: 4, label: "@i18n.field.inductorType.common-mode-choke"}
+        - {id: ferrite-bead, code: 5, label: "@i18n.field.inductorType.ferrite-bead"}
+        - {id: rf, code: 6, label: "@i18n.field.inductorType.rf"}
+        - {id: wireless-charging-coil, code: 7, label: "@i18n.field.inductorType.wireless-charging-coil"}
+  - id: integratedCircuitType
+    type: enum
+    label: "@i18n.field.integratedCircuitType.label"
+    required: false
+    options:
+      - {id: microcontroller, label: "@i18n.field.integratedCircuitType.microcontroller"}
+      - {id: microprocessor-soc, label: "@i18n.field.integratedCircuitType.microprocessor-soc"}
+      - {id: analog-amplifier, label: "@i18n.field.integratedCircuitType.analog-amplifier"}
+      - {id: logic, label: "@i18n.field.integratedCircuitType.logic"}
+      - {id: memory, label: "@i18n.field.integratedCircuitType.memory"}
+      - {id: power-management, label: "@i18n.field.integratedCircuitType.power-management"}
+      - {id: voltage-regulator, label: "@i18n.field.integratedCircuitType.voltage-regulator"}
+      - {id: interface, label: "@i18n.field.integratedCircuitType.interface"}
+      - {id: driver, label: "@i18n.field.integratedCircuitType.driver"}
+      - {id: data-converter, label: "@i18n.field.integratedCircuitType.data-converter"}
+      - {id: clock-timing, label: "@i18n.field.integratedCircuitType.clock-timing"}
+      - {id: fpga-cpld, label: "@i18n.field.integratedCircuitType.fpga-cpld"}
+      - {id: dsp, label: "@i18n.field.integratedCircuitType.dsp"}
+      - {id: sensor-interface, label: "@i18n.field.integratedCircuitType.sensor-interface"}
+      - {id: dedicated, label: "@i18n.field.integratedCircuitType.dedicated"}
+    nfc:
+      code: 12
+      role: secondary
+      dictionary:
+        - {id: microcontroller, code: 1, label: "@i18n.field.integratedCircuitType.microcontroller"}
+        - {id: microprocessor-soc, code: 2, label: "@i18n.field.integratedCircuitType.microprocessor-soc"}
+        - {id: analog-amplifier, code: 3, label: "@i18n.field.integratedCircuitType.analog-amplifier"}
+        - {id: logic, code: 4, label: "@i18n.field.integratedCircuitType.logic"}
+        - {id: memory, code: 5, label: "@i18n.field.integratedCircuitType.memory"}
+        - {id: power-management, code: 6, label: "@i18n.field.integratedCircuitType.power-management"}
+        - {id: voltage-regulator, code: 7, label: "@i18n.field.integratedCircuitType.voltage-regulator"}
+        - {id: interface, code: 8, label: "@i18n.field.integratedCircuitType.interface"}
+        - {id: driver, code: 9, label: "@i18n.field.integratedCircuitType.driver"}
+        - {id: data-converter, code: 10, label: "@i18n.field.integratedCircuitType.data-converter"}
+        - {id: clock-timing, code: 11, label: "@i18n.field.integratedCircuitType.clock-timing"}
+        - {id: fpga-cpld, code: 12, label: "@i18n.field.integratedCircuitType.fpga-cpld"}
+        - {id: dsp, code: 13, label: "@i18n.field.integratedCircuitType.dsp"}
+        - {id: sensor-interface, code: 14, label: "@i18n.field.integratedCircuitType.sensor-interface"}
+        - {id: dedicated, code: 15, label: "@i18n.field.integratedCircuitType.dedicated"}
+  - id: ledType
+    type: enum
+    label: "@i18n.field.ledType.label"
+    required: false
+    options:
+      - {id: discrete, label: "@i18n.field.ledType.discrete"}
+      - {id: rgb, label: "@i18n.field.ledType.rgb"}
+      - {id: addressable, label: "@i18n.field.ledType.addressable"}
+      - {id: infrared, label: "@i18n.field.ledType.infrared"}
+      - {id: ultraviolet, label: "@i18n.field.ledType.ultraviolet"}
+      - {id: high-power, label: "@i18n.field.ledType.high-power"}
+      - {id: cob-module, label: "@i18n.field.ledType.cob-module"}
+      - {id: numeric-dot-matrix, label: "@i18n.field.ledType.numeric-dot-matrix"}
+    nfc:
+      code: 13
+      role: secondary
+      dictionary:
+        - {id: discrete, code: 1, label: "@i18n.field.ledType.discrete"}
+        - {id: rgb, code: 2, label: "@i18n.field.ledType.rgb"}
+        - {id: addressable, code: 3, label: "@i18n.field.ledType.addressable"}
+        - {id: infrared, code: 4, label: "@i18n.field.ledType.infrared"}
+        - {id: ultraviolet, code: 5, label: "@i18n.field.ledType.ultraviolet"}
+        - {id: high-power, code: 6, label: "@i18n.field.ledType.high-power"}
+        - {id: cob-module, code: 7, label: "@i18n.field.ledType.cob-module"}
+        - {id: numeric-dot-matrix, code: 8, label: "@i18n.field.ledType.numeric-dot-matrix"}
+  - id: transistorType
+    type: enum
+    label: "@i18n.field.transistorType.label"
+    required: false
+    options:
+      - {id: bjt-npn, label: "@i18n.field.transistorType.bjt-npn"}
+      - {id: bjt-pnp, label: "@i18n.field.transistorType.bjt-pnp"}
+      - {id: n-mosfet, label: "@i18n.field.transistorType.n-mosfet"}
+      - {id: p-mosfet, label: "@i18n.field.transistorType.p-mosfet"}
+      - {id: jfet, label: "@i18n.field.transistorType.jfet"}
+      - {id: igbt, label: "@i18n.field.transistorType.igbt"}
+      - {id: darlington, label: "@i18n.field.transistorType.darlington"}
+      - {id: transistor-array, label: "@i18n.field.transistorType.transistor-array"}
+      - {id: rf-transistor, label: "@i18n.field.transistorType.rf-transistor"}
+    nfc:
+      code: 14
+      role: secondary
+      dictionary:
+        - {id: bjt-npn, code: 1, label: "@i18n.field.transistorType.bjt-npn"}
+        - {id: bjt-pnp, code: 2, label: "@i18n.field.transistorType.bjt-pnp"}
+        - {id: n-mosfet, code: 3, label: "@i18n.field.transistorType.n-mosfet"}
+        - {id: p-mosfet, code: 4, label: "@i18n.field.transistorType.p-mosfet"}
+        - {id: jfet, code: 5, label: "@i18n.field.transistorType.jfet"}
+        - {id: igbt, code: 6, label: "@i18n.field.transistorType.igbt"}
+        - {id: darlington, code: 7, label: "@i18n.field.transistorType.darlington"}
+        - {id: transistor-array, code: 8, label: "@i18n.field.transistorType.transistor-array"}
+        - {id: rf-transistor, code: 9, label: "@i18n.field.transistorType.rf-transistor"}
+  - id: oscillatorType
+    type: enum
+    label: "@i18n.field.oscillatorType.label"
+    required: false
+    options:
+      - {id: crystal, label: "@i18n.field.oscillatorType.crystal"}
+      - {id: oscillator, label: "@i18n.field.oscillatorType.oscillator"}
+      - {id: ceramic-resonator, label: "@i18n.field.oscillatorType.ceramic-resonator"}
+      - {id: programmable-oscillator, label: "@i18n.field.oscillatorType.programmable-oscillator"}
+      - {id: tcxo, label: "@i18n.field.oscillatorType.tcxo"}
+      - {id: vcxo, label: "@i18n.field.oscillatorType.vcxo"}
+      - {id: vco, label: "@i18n.field.oscillatorType.vco"}
+      - {id: rtc-crystal, label: "@i18n.field.oscillatorType.rtc-crystal"}
+    nfc:
+      code: 15
+      role: secondary
+      dictionary:
+        - {id: crystal, code: 1, label: "@i18n.field.oscillatorType.crystal"}
+        - {id: oscillator, code: 2, label: "@i18n.field.oscillatorType.oscillator"}
+        - {id: ceramic-resonator, code: 3, label: "@i18n.field.oscillatorType.ceramic-resonator"}
+        - {id: programmable-oscillator, code: 4, label: "@i18n.field.oscillatorType.programmable-oscillator"}
+        - {id: tcxo, code: 5, label: "@i18n.field.oscillatorType.tcxo"}
+        - {id: vcxo, code: 6, label: "@i18n.field.oscillatorType.vcxo"}
+        - {id: vco, code: 7, label: "@i18n.field.oscillatorType.vco"}
+        - {id: rtc-crystal, code: 8, label: "@i18n.field.oscillatorType.rtc-crystal"}
+  - id: relayType
+    type: enum
+    label: "@i18n.field.relayType.label"
+    required: false
+    options:
+      - {id: signal, label: "@i18n.field.relayType.signal"}
+      - {id: power, label: "@i18n.field.relayType.power"}
+      - {id: solid-state, label: "@i18n.field.relayType.solid-state"}
+      - {id: reed, label: "@i18n.field.relayType.reed"}
+      - {id: latching, label: "@i18n.field.relayType.latching"}
+      - {id: automotive, label: "@i18n.field.relayType.automotive"}
+      - {id: rf, label: "@i18n.field.relayType.rf"}
+      - {id: contactor, label: "@i18n.field.relayType.contactor"}
+    nfc:
+      code: 16
+      role: secondary
+      dictionary:
+        - {id: signal, code: 1, label: "@i18n.field.relayType.signal"}
+        - {id: power, code: 2, label: "@i18n.field.relayType.power"}
+        - {id: solid-state, code: 3, label: "@i18n.field.relayType.solid-state"}
+        - {id: reed, code: 4, label: "@i18n.field.relayType.reed"}
+        - {id: latching, code: 5, label: "@i18n.field.relayType.latching"}
+        - {id: automotive, code: 6, label: "@i18n.field.relayType.automotive"}
+        - {id: rf, code: 7, label: "@i18n.field.relayType.rf"}
+        - {id: contactor, code: 8, label: "@i18n.field.relayType.contactor"}
+  - id: switchType
+    type: enum
+    label: "@i18n.field.switchType.label"
+    required: false
+    options:
+      - {id: tactile, label: "@i18n.field.switchType.tactile"}
+      - {id: push-button, label: "@i18n.field.switchType.push-button"}
+      - {id: toggle, label: "@i18n.field.switchType.toggle"}
+      - {id: slide, label: "@i18n.field.switchType.slide"}
+      - {id: rotary, label: "@i18n.field.switchType.rotary"}
+      - {id: dip, label: "@i18n.field.switchType.dip"}
+      - {id: rocker, label: "@i18n.field.switchType.rocker"}
+      - {id: microswitch-limit, label: "@i18n.field.switchType.microswitch-limit"}
+      - {id: reed, label: "@i18n.field.switchType.reed"}
+      - {id: encoder, label: "@i18n.field.switchType.encoder"}
+    nfc:
+      code: 17
+      role: secondary
+      dictionary:
+        - {id: tactile, code: 1, label: "@i18n.field.switchType.tactile"}
+        - {id: push-button, code: 2, label: "@i18n.field.switchType.push-button"}
+        - {id: toggle, code: 3, label: "@i18n.field.switchType.toggle"}
+        - {id: slide, code: 4, label: "@i18n.field.switchType.slide"}
+        - {id: rotary, code: 5, label: "@i18n.field.switchType.rotary"}
+        - {id: dip, code: 6, label: "@i18n.field.switchType.dip"}
+        - {id: rocker, code: 7, label: "@i18n.field.switchType.rocker"}
+        - {id: microswitch-limit, code: 8, label: "@i18n.field.switchType.microswitch-limit"}
+        - {id: reed, code: 9, label: "@i18n.field.switchType.reed"}
+        - {id: encoder, code: 10, label: "@i18n.field.switchType.encoder"}
+  - id: sensorType
+    type: enum
+    label: "@i18n.field.sensorType.label"
+    required: false
+    options:
+      - {id: temperature, label: "@i18n.field.sensorType.temperature"}
+      - {id: humidity, label: "@i18n.field.sensorType.humidity"}
+      - {id: pressure, label: "@i18n.field.sensorType.pressure"}
+      - {id: light-color, label: "@i18n.field.sensorType.light-color"}
+      - {id: proximity-distance, label: "@i18n.field.sensorType.proximity-distance"}
+      - {id: motion-imu, label: "@i18n.field.sensorType.motion-imu"}
+      - {id: magnetic-hall, label: "@i18n.field.sensorType.magnetic-hall"}
+      - {id: current-voltage, label: "@i18n.field.sensorType.current-voltage"}
+      - {id: gas-air-quality, label: "@i18n.field.sensorType.gas-air-quality"}
+      - {id: force-strain, label: "@i18n.field.sensorType.force-strain"}
+      - {id: sound, label: "@i18n.field.sensorType.sound"}
+      - {id: touch, label: "@i18n.field.sensorType.touch"}
+      - {id: image-camera, label: "@i18n.field.sensorType.image-camera"}
+      - {id: liquid-level-flow, label: "@i18n.field.sensorType.liquid-level-flow"}
+    nfc:
+      code: 18
+      role: secondary
+      dictionary:
+        - {id: temperature, code: 1, label: "@i18n.field.sensorType.temperature"}
+        - {id: humidity, code: 2, label: "@i18n.field.sensorType.humidity"}
+        - {id: pressure, code: 3, label: "@i18n.field.sensorType.pressure"}
+        - {id: light-color, code: 4, label: "@i18n.field.sensorType.light-color"}
+        - {id: proximity-distance, code: 5, label: "@i18n.field.sensorType.proximity-distance"}
+        - {id: motion-imu, code: 6, label: "@i18n.field.sensorType.motion-imu"}
+        - {id: magnetic-hall, code: 7, label: "@i18n.field.sensorType.magnetic-hall"}
+        - {id: current-voltage, code: 8, label: "@i18n.field.sensorType.current-voltage"}
+        - {id: gas-air-quality, code: 9, label: "@i18n.field.sensorType.gas-air-quality"}
+        - {id: force-strain, code: 10, label: "@i18n.field.sensorType.force-strain"}
+        - {id: sound, code: 11, label: "@i18n.field.sensorType.sound"}
+        - {id: touch, code: 12, label: "@i18n.field.sensorType.touch"}
+        - {id: image-camera, code: 13, label: "@i18n.field.sensorType.image-camera"}
+        - {id: liquid-level-flow, code: 14, label: "@i18n.field.sensorType.liquid-level-flow"}
+  - id: transformerType
+    type: enum
+    label: "@i18n.field.transformerType.label"
+    required: false
+    options:
+      - {id: power, label: "@i18n.field.transformerType.power"}
+      - {id: current, label: "@i18n.field.transformerType.current"}
+      - {id: pulse, label: "@i18n.field.transformerType.pulse"}
+      - {id: audio, label: "@i18n.field.transformerType.audio"}
+      - {id: isolation, label: "@i18n.field.transformerType.isolation"}
+      - {id: smps, label: "@i18n.field.transformerType.smps"}
+      - {id: rf-balun, label: "@i18n.field.transformerType.rf-balun"}
+    nfc:
+      code: 19
+      role: secondary
+      dictionary:
+        - {id: power, code: 1, label: "@i18n.field.transformerType.power"}
+        - {id: current, code: 2, label: "@i18n.field.transformerType.current"}
+        - {id: pulse, code: 3, label: "@i18n.field.transformerType.pulse"}
+        - {id: audio, code: 4, label: "@i18n.field.transformerType.audio"}
+        - {id: isolation, code: 5, label: "@i18n.field.transformerType.isolation"}
+        - {id: smps, code: 6, label: "@i18n.field.transformerType.smps"}
+        - {id: rf-balun, code: 7, label: "@i18n.field.transformerType.rf-balun"}
+  - id: protectionType
+    type: enum
+    label: "@i18n.field.protectionType.label"
+    required: false
+    options:
+      - {id: fuse, label: "@i18n.field.protectionType.fuse"}
+      - {id: resettable-fuse, label: "@i18n.field.protectionType.resettable-fuse"}
+      - {id: thermal-fuse, label: "@i18n.field.protectionType.thermal-fuse"}
+      - {id: fuse-holder, label: "@i18n.field.protectionType.fuse-holder"}
+      - {id: tvs-diode, label: "@i18n.field.protectionType.tvs-diode"}
+      - {id: mov-varistor, label: "@i18n.field.protectionType.mov-varistor"}
+      - {id: gas-discharge-tube, label: "@i18n.field.protectionType.gas-discharge-tube"}
+      - {id: circuit-breaker, label: "@i18n.field.protectionType.circuit-breaker"}
+      - {id: inrush-current-limiter, label: "@i18n.field.protectionType.inrush-current-limiter"}
+      - {id: surge-protection-ic, label: "@i18n.field.protectionType.surge-protection-ic"}
+    nfc:
+      code: 20
+      role: secondary
+      dictionary:
+        - {id: fuse, code: 1, label: "@i18n.field.protectionType.fuse"}
+        - {id: resettable-fuse, code: 2, label: "@i18n.field.protectionType.resettable-fuse"}
+        - {id: thermal-fuse, code: 3, label: "@i18n.field.protectionType.thermal-fuse"}
+        - {id: fuse-holder, code: 4, label: "@i18n.field.protectionType.fuse-holder"}
+        - {id: tvs-diode, code: 5, label: "@i18n.field.protectionType.tvs-diode"}
+        - {id: mov-varistor, code: 6, label: "@i18n.field.protectionType.mov-varistor"}
+        - {id: gas-discharge-tube, code: 7, label: "@i18n.field.protectionType.gas-discharge-tube"}
+        - {id: circuit-breaker, code: 8, label: "@i18n.field.protectionType.circuit-breaker"}
+        - {id: inrush-current-limiter, code: 9, label: "@i18n.field.protectionType.inrush-current-limiter"}
+        - {id: surge-protection-ic, code: 10, label: "@i18n.field.protectionType.surge-protection-ic"}
+  - id: optocouplerType
+    type: enum
+    label: "@i18n.field.optocouplerType.label"
+    required: false
+    options:
+      - {id: phototransistor, label: "@i18n.field.optocouplerType.phototransistor"}
+      - {id: logic-output, label: "@i18n.field.optocouplerType.logic-output"}
+      - {id: triac-scr, label: "@i18n.field.optocouplerType.triac-scr"}
+      - {id: gate-driver, label: "@i18n.field.optocouplerType.gate-driver"}
+      - {id: linear, label: "@i18n.field.optocouplerType.linear"}
+      - {id: digital-isolator, label: "@i18n.field.optocouplerType.digital-isolator"}
+    nfc:
+      code: 21
+      role: secondary
+      dictionary:
+        - {id: phototransistor, code: 1, label: "@i18n.field.optocouplerType.phototransistor"}
+        - {id: logic-output, code: 2, label: "@i18n.field.optocouplerType.logic-output"}
+        - {id: triac-scr, code: 3, label: "@i18n.field.optocouplerType.triac-scr"}
+        - {id: gate-driver, code: 4, label: "@i18n.field.optocouplerType.gate-driver"}
+        - {id: linear, code: 5, label: "@i18n.field.optocouplerType.linear"}
+        - {id: digital-isolator, code: 6, label: "@i18n.field.optocouplerType.digital-isolator"}
+  - id: potentiometerType
+    type: enum
+    label: "@i18n.field.potentiometerType.label"
+    required: false
+    options:
+      - {id: rotary, label: "@i18n.field.potentiometerType.rotary"}
+      - {id: slide, label: "@i18n.field.potentiometerType.slide"}
+      - {id: trimmer, label: "@i18n.field.potentiometerType.trimmer"}
+      - {id: thumbwheel, label: "@i18n.field.potentiometerType.thumbwheel"}
+      - {id: digital, label: "@i18n.field.potentiometerType.digital"}
+      - {id: joystick, label: "@i18n.field.potentiometerType.joystick"}
+      - {id: rheostat, label: "@i18n.field.potentiometerType.rheostat"}
+    nfc:
+      code: 22
+      role: secondary
+      dictionary:
+        - {id: rotary, code: 1, label: "@i18n.field.potentiometerType.rotary"}
+        - {id: slide, code: 2, label: "@i18n.field.potentiometerType.slide"}
+        - {id: trimmer, code: 3, label: "@i18n.field.potentiometerType.trimmer"}
+        - {id: thumbwheel, code: 4, label: "@i18n.field.potentiometerType.thumbwheel"}
+        - {id: digital, code: 5, label: "@i18n.field.potentiometerType.digital"}
+        - {id: joystick, code: 6, label: "@i18n.field.potentiometerType.joystick"}
+        - {id: rheostat, code: 7, label: "@i18n.field.potentiometerType.rheostat"}
+  - id: powerModuleType
+    type: enum
+    label: "@i18n.field.powerModuleType.label"
+    required: false
+    options:
+      - {id: ac-dc, label: "@i18n.field.powerModuleType.ac-dc"}
+      - {id: dc-dc, label: "@i18n.field.powerModuleType.dc-dc"}
+      - {id: linear-regulator-module, label: "@i18n.field.powerModuleType.linear-regulator-module"}
+      - {id: buck, label: "@i18n.field.powerModuleType.buck"}
+      - {id: boost, label: "@i18n.field.powerModuleType.boost"}
+      - {id: buck-boost, label: "@i18n.field.powerModuleType.buck-boost"}
+      - {id: led-driver, label: "@i18n.field.powerModuleType.led-driver"}
+      - {id: battery-charger, label: "@i18n.field.powerModuleType.battery-charger"}
+      - {id: poe, label: "@i18n.field.powerModuleType.poe"}
+    nfc:
+      code: 23
+      role: secondary
+      dictionary:
+        - {id: ac-dc, code: 1, label: "@i18n.field.powerModuleType.ac-dc"}
+        - {id: dc-dc, code: 2, label: "@i18n.field.powerModuleType.dc-dc"}
+        - {id: linear-regulator-module, code: 3, label: "@i18n.field.powerModuleType.linear-regulator-module"}
+        - {id: buck, code: 4, label: "@i18n.field.powerModuleType.buck"}
+        - {id: boost, code: 5, label: "@i18n.field.powerModuleType.boost"}
+        - {id: buck-boost, code: 6, label: "@i18n.field.powerModuleType.buck-boost"}
+        - {id: led-driver, code: 7, label: "@i18n.field.powerModuleType.led-driver"}
+        - {id: battery-charger, code: 8, label: "@i18n.field.powerModuleType.battery-charger"}
+        - {id: poe, code: 9, label: "@i18n.field.powerModuleType.poe"}
+  - id: batteryType
+    type: enum
+    label: "@i18n.field.batteryType.label"
+    required: false
+    options:
+      - {id: primary-cell, label: "@i18n.field.batteryType.primary-cell"}
+      - {id: rechargeable-cell, label: "@i18n.field.batteryType.rechargeable-cell"}
+      - {id: battery-pack, label: "@i18n.field.batteryType.battery-pack"}
+      - {id: coin-cell, label: "@i18n.field.batteryType.coin-cell"}
+      - {id: holder-clip, label: "@i18n.field.batteryType.holder-clip"}
+      - {id: protection-board, label: "@i18n.field.batteryType.protection-board"}
+    nfc:
+      code: 24
+      role: secondary
+      dictionary:
+        - {id: primary-cell, code: 1, label: "@i18n.field.batteryType.primary-cell"}
+        - {id: rechargeable-cell, code: 2, label: "@i18n.field.batteryType.rechargeable-cell"}
+        - {id: battery-pack, code: 3, label: "@i18n.field.batteryType.battery-pack"}
+        - {id: coin-cell, code: 4, label: "@i18n.field.batteryType.coin-cell"}
+        - {id: holder-clip, code: 5, label: "@i18n.field.batteryType.holder-clip"}
+        - {id: protection-board, code: 6, label: "@i18n.field.batteryType.protection-board"}
+  - id: motorType
+    type: enum
+    label: "@i18n.field.motorType.label"
+    required: false
+    options:
+      - {id: dc-motor, label: "@i18n.field.motorType.dc-motor"}
+      - {id: ac-motor, label: "@i18n.field.motorType.ac-motor"}
+      - {id: stepper-motor, label: "@i18n.field.motorType.stepper-motor"}
+      - {id: servo, label: "@i18n.field.motorType.servo"}
+      - {id: solenoid, label: "@i18n.field.motorType.solenoid"}
+      - {id: linear-actuator, label: "@i18n.field.motorType.linear-actuator"}
+      - {id: driver-module, label: "@i18n.field.motorType.driver-module"}
+    nfc:
+      code: 25
+      role: secondary
+      dictionary:
+        - {id: dc-motor, code: 1, label: "@i18n.field.motorType.dc-motor"}
+        - {id: ac-motor, code: 2, label: "@i18n.field.motorType.ac-motor"}
+        - {id: stepper-motor, code: 3, label: "@i18n.field.motorType.stepper-motor"}
+        - {id: servo, code: 4, label: "@i18n.field.motorType.servo"}
+        - {id: solenoid, code: 5, label: "@i18n.field.motorType.solenoid"}
+        - {id: linear-actuator, code: 6, label: "@i18n.field.motorType.linear-actuator"}
+        - {id: driver-module, code: 7, label: "@i18n.field.motorType.driver-module"}
+  - id: audioType
+    type: enum
+    label: "@i18n.field.audioType.label"
+    required: false
+    options:
+      - {id: speaker, label: "@i18n.field.audioType.speaker"}
+      - {id: buzzer, label: "@i18n.field.audioType.buzzer"}
+      - {id: microphone, label: "@i18n.field.audioType.microphone"}
+      - {id: piezo-element, label: "@i18n.field.audioType.piezo-element"}
+      - {id: audio-module, label: "@i18n.field.audioType.audio-module"}
+    nfc:
+      code: 26
+      role: secondary
+      dictionary:
+        - {id: speaker, code: 1, label: "@i18n.field.audioType.speaker"}
+        - {id: buzzer, code: 2, label: "@i18n.field.audioType.buzzer"}
+        - {id: microphone, code: 3, label: "@i18n.field.audioType.microphone"}
+        - {id: piezo-element, code: 4, label: "@i18n.field.audioType.piezo-element"}
+        - {id: audio-module, code: 5, label: "@i18n.field.audioType.audio-module"}
+  - id: displayType
+    type: enum
+    label: "@i18n.field.displayType.label"
+    required: false
+    options:
+      - {id: lcd, label: "@i18n.field.displayType.lcd"}
+      - {id: oled, label: "@i18n.field.displayType.oled"}
+      - {id: e-paper, label: "@i18n.field.displayType.e-paper"}
+      - {id: seven-segment, label: "@i18n.field.displayType.seven-segment"}
+      - {id: led-matrix, label: "@i18n.field.displayType.led-matrix"}
+      - {id: vfd, label: "@i18n.field.displayType.vfd"}
+      - {id: touch-panel, label: "@i18n.field.displayType.touch-panel"}
+    nfc:
+      code: 27
+      role: secondary
+      dictionary:
+        - {id: lcd, code: 1, label: "@i18n.field.displayType.lcd"}
+        - {id: oled, code: 2, label: "@i18n.field.displayType.oled"}
+        - {id: e-paper, code: 3, label: "@i18n.field.displayType.e-paper"}
+        - {id: seven-segment, code: 4, label: "@i18n.field.displayType.seven-segment"}
+        - {id: led-matrix, code: 5, label: "@i18n.field.displayType.led-matrix"}
+        - {id: vfd, code: 6, label: "@i18n.field.displayType.vfd"}
+        - {id: touch-panel, code: 7, label: "@i18n.field.displayType.touch-panel"}
+  - id: moduleType
+    type: enum
+    label: "@i18n.field.moduleType.label"
+    required: false
+    options:
+      - {id: mcu-development-board, label: "@i18n.field.moduleType.mcu-development-board"}
+      - {id: single-board-computer, label: "@i18n.field.moduleType.single-board-computer"}
+      - {id: fpga-cpld-board, label: "@i18n.field.moduleType.fpga-cpld-board"}
+      - {id: sensor-module, label: "@i18n.field.moduleType.sensor-module"}
+      - {id: communication-module, label: "@i18n.field.moduleType.communication-module"}
+      - {id: display-module, label: "@i18n.field.moduleType.display-module"}
+      - {id: programmer-debugger, label: "@i18n.field.moduleType.programmer-debugger"}
+      - {id: expansion-board, label: "@i18n.field.moduleType.expansion-board"}
+    nfc:
+      code: 28
+      role: secondary
+      dictionary:
+        - {id: mcu-development-board, code: 1, label: "@i18n.field.moduleType.mcu-development-board"}
+        - {id: single-board-computer, code: 2, label: "@i18n.field.moduleType.single-board-computer"}
+        - {id: fpga-cpld-board, code: 3, label: "@i18n.field.moduleType.fpga-cpld-board"}
+        - {id: sensor-module, code: 4, label: "@i18n.field.moduleType.sensor-module"}
+        - {id: communication-module, code: 5, label: "@i18n.field.moduleType.communication-module"}
+        - {id: display-module, code: 6, label: "@i18n.field.moduleType.display-module"}
+        - {id: programmer-debugger, code: 7, label: "@i18n.field.moduleType.programmer-debugger"}
+        - {id: expansion-board, code: 8, label: "@i18n.field.moduleType.expansion-board"}
+  - id: rfType
+    type: enum
+    label: "@i18n.field.rfType.label"
+    required: false
+    options:
+      - {id: antenna, label: "@i18n.field.rfType.antenna"}
+      - {id: amplifier, label: "@i18n.field.rfType.amplifier"}
+      - {id: mixer, label: "@i18n.field.rfType.mixer"}
+      - {id: switch, label: "@i18n.field.rfType.switch"}
+      - {id: transceiver-module, label: "@i18n.field.rfType.transceiver-module"}
+      - {id: receiver-transmitter, label: "@i18n.field.rfType.receiver-transmitter"}
+      - {id: attenuator, label: "@i18n.field.rfType.attenuator"}
+      - {id: coupler-divider, label: "@i18n.field.rfType.coupler-divider"}
+      - {id: rfid, label: "@i18n.field.rfType.rfid"}
+      - {id: shield, label: "@i18n.field.rfType.shield"}
+    nfc:
+      code: 29
+      role: secondary
+      dictionary:
+        - {id: antenna, code: 1, label: "@i18n.field.rfType.antenna"}
+        - {id: amplifier, code: 2, label: "@i18n.field.rfType.amplifier"}
+        - {id: mixer, code: 3, label: "@i18n.field.rfType.mixer"}
+        - {id: switch, code: 4, label: "@i18n.field.rfType.switch"}
+        - {id: transceiver-module, code: 5, label: "@i18n.field.rfType.transceiver-module"}
+        - {id: receiver-transmitter, code: 6, label: "@i18n.field.rfType.receiver-transmitter"}
+        - {id: attenuator, code: 7, label: "@i18n.field.rfType.attenuator"}
+        - {id: coupler-divider, code: 8, label: "@i18n.field.rfType.coupler-divider"}
+        - {id: rfid, code: 9, label: "@i18n.field.rfType.rfid"}
+        - {id: shield, code: 10, label: "@i18n.field.rfType.shield"}
+  - id: filterType
+    type: enum
+    label: "@i18n.field.filterType.label"
+    required: false
+    options:
+      - {id: emi-rfi, label: "@i18n.field.filterType.emi-rfi"}
+      - {id: common-mode-choke, label: "@i18n.field.filterType.common-mode-choke"}
+      - {id: ferrite-bead-core, label: "@i18n.field.filterType.ferrite-bead-core"}
+      - {id: saw, label: "@i18n.field.filterType.saw"}
+      - {id: ceramic, label: "@i18n.field.filterType.ceramic"}
+      - {id: crystal, label: "@i18n.field.filterType.crystal"}
+      - {id: rf, label: "@i18n.field.filterType.rf"}
+      - {id: power-line, label: "@i18n.field.filterType.power-line"}
+      - {id: feedthrough-capacitor, label: "@i18n.field.filterType.feedthrough-capacitor"}
+    nfc:
+      code: 30
+      role: secondary
+      dictionary:
+        - {id: emi-rfi, code: 1, label: "@i18n.field.filterType.emi-rfi"}
+        - {id: common-mode-choke, code: 2, label: "@i18n.field.filterType.common-mode-choke"}
+        - {id: ferrite-bead-core, code: 3, label: "@i18n.field.filterType.ferrite-bead-core"}
+        - {id: saw, code: 4, label: "@i18n.field.filterType.saw"}
+        - {id: ceramic, code: 5, label: "@i18n.field.filterType.ceramic"}
+        - {id: crystal, code: 6, label: "@i18n.field.filterType.crystal"}
+        - {id: rf, code: 7, label: "@i18n.field.filterType.rf"}
+        - {id: power-line, code: 8, label: "@i18n.field.filterType.power-line"}
+        - {id: feedthrough-capacitor, code: 9, label: "@i18n.field.filterType.feedthrough-capacitor"}
+  - id: quantity
+    type: integer
+    label: "@i18n.field.quantity.label"
+    required: true

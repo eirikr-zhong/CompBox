@@ -6,8 +6,15 @@
   "scanTooltip": "Scan code",
   "scanInProgress": "Scanner is under design",
   "myComponents": "My components",
+  "allCategories": "All categories",
+  "emptyInventoryTitle": "No component records yet",
+  "emptyInventoryDescription": "Scan an NFC tag to create the first record.",
+  "noMatchingComponents": "No matching components",
+  "noMatchingComponentsDescription": "Adjust the search or category filter.",
+  "resourceLoadError": "Local resource configuration could not be loaded.",
   "location": "Location",
   "quantity": "Qty",
+  "inventory": "Inventory",
   "quantityValue": "{quantity} pcs",
   "@quantityValue": {
     "placeholders": {
@@ -15,9 +22,98 @@
     }
   },
   "home": "Home",
-  "profile": "Profile",
+  "profile": "Settings",
   "nfcScan": "NFC scan",
   "nfcPreparing": "Preparing NFC scan",
+  "nfcTitle": "NFC",
+  "nfcScanningTitle": "NFC scanning",
+  "nfcScanning": "Scanning",
+  "nfcScanInstruction": "Hold the back of your phone near the NFC tag",
+  "nfcReadyToScan": "Ready to scan an NFC tag",
+  "nfcScanTag": "Scan tag",
+  "nfcRescan": "Rescan tag",
+  "nfcWriteTag": "Rescan and write tag",
+  "nfcError": "NFC operation failed",
+  "nfcUnavailable": "This device does not support NFC.",
+  "nfcDisabled": "NFC is off. Turn it on in system settings.",
+  "nfcUnsupportedTag": "This tag does not support NDEF.",
+  "nfcReadOnly": "This NFC tag is read-only and cannot be written.",
+  "nfcCapacityError": "This tag does not have enough capacity for the snapshot.",
+  "nfcPayloadTooLarge": "The snapshot is {bytes} bytes and exceeds the conservative tag limit of {limit} bytes.",
+  "@nfcPayloadTooLarge": {
+    "placeholders": {
+      "bytes": { "type": "String" },
+      "limit": { "type": "String" }
+    }
+  },
+  "nfcUidMismatch": "The rescanned tag is not the tag currently being edited.",
+  "nfcCrcError": "The tag snapshot checksum failed; its data may be damaged.",
+  "nfcUnknownProtocol": "The tag does not contain a recognizable CompBox snapshot.",
+  "nfcUnsupportedVersion": "This tag uses an unsupported CompBox snapshot version.",
+  "nfcInvalidSnapshot": "The tag snapshot is invalid.",
+  "nfcNeedsInitialization": "This tag needs to be initialized before it can be used with CompBox.",
+  "nfcReinitializeTag": "This tag uses an older CompBox format. Reinitialize it before use.",
+  "nfcSlotSelectionTitle": "Choose a compartment",
+  "nfcFinishEditing": "Done editing",
+  "nfcSaveAll": "Save all compartments",
+  "nfcClearTag": "Clear tag",
+  "nfcClearTagDialogDescription": "Hold the back of your phone near the NFC tag to clear it.",
+  "nfcClearTagSuccess": "NFC tag cleared",
+  "nfcSlotEmpty": "Empty",
+  "nfcSlotLabel": "Compartment {index}",
+  "@nfcSlotLabel": {
+    "placeholders": {
+      "index": { "type": "String" }
+    }
+  },
+  "nfcCustomTextTooLong": "The custom text is too long to write to this tag.",
+  "nfcReadFailed": "This NFC tag could not be read. Try again.",
+  "nfcWriteFailed": "This NFC tag could not be written. Try again.",
+  "nfcTagOverridesLocalTitle": "Replace the local record with the tag?",
+  "nfcTagOverridesLocalDescription": "The local copy at {location} differs from the tag. Confirm to replace the local copy with the tag contents.",
+  "@nfcTagOverridesLocalDescription": {
+    "placeholders": {
+      "location": { "type": "String" }
+    }
+  },
+  "nfcTagRead": "NFC tag read",
+  "nfcRead": "Read",
+  "nfcTagReadDescription": "Tag information is ready to edit",
+  "componentName": "Component name",
+  "componentNameHint": "Enter component name",
+  "modelSpecification": "Model / specification",
+  "modelSpecificationHint": "Enter model or specification",
+  "decreaseQuantity": "Decrease quantity",
+  "increaseQuantity": "Increase quantity",
+  "save": "Save",
+  "nfcSaveDialogTitle": "Save scanned tag",
+  "nfcSaveDialogDescription": "Hold the back of your phone near the NFC tag to save.",
+  "cancel": "Cancel",
+  "requiredField": "Enter {field}",
+  "@requiredField": {
+    "placeholders": {
+      "field": { "type": "String" }
+    }
+  },
+  "invalidInteger": "Enter a whole number",
+  "invalidNumber": "Enter a valid number",
+  "invalidLocation": "Enter a location like A-01-03 (numbers 1–255)",
+  "insufficientStock": "Stock out cannot exceed current stock",
+  "currentQuantityValue": "Current stock: {quantity}",
+  "@currentQuantityValue": {
+    "placeholders": {
+      "quantity": { "type": "String" }
+    }
+  },
+  "recordSaved": "Record saved",
+  "overwriteRecordTitle": "Overwrite existing record?",
+  "overwriteRecordDescription": "{location} already has a record. Confirm to replace it with the complete form data.",
+  "@overwriteRecordDescription": {
+    "placeholders": {
+      "location": { "type": "String" }
+    }
+  },
+  "overwrite": "Overwrite",
   "componentDetail": "Component details",
   "inventoryInformation": "Inventory information",
   "specificationInformation": "Specification",
@@ -45,7 +141,7 @@
   "specTimer": "SOP-8",
   "specConnector": "Type-C 16P · board mount",
   "specLed": "Through-hole LED",
-  "profileTitle": "Profile",
+  "profileTitle": "Settings",
   "profileMonogram": "P",
   "prototypeAccount": "CompBox Design Account",
   "prototypeOnly": "Prototype data for design only",
@@ -53,7 +149,52 @@
   "componentStat": "Components",
   "stockTotal": "Total stock",
   "locationStat": "Locations",
+  "initializeTagSection": "NFC tags",
+  "initializeTagTitle": "Initialize NFC tag",
+  "initializeTagDescription": "Create a 1×N CompBox container on an NFC tag.",
+  "initializeTagColumns": "Compartments",
+  "initializeTagLayout": "1×{columns}",
+  "@initializeTagLayout": {
+    "placeholders": {
+      "columns": { "type": "String" }
+    }
+  },
+  "initializeTagAction": "Initialize",
+  "initializeTagConfirmation": "Initialization clears all existing tag content, including older CompBox records and unrecognized NDEF data.",
+  "initializeTagFirstScan": "Hold the tag near your phone to check it.",
+  "initializeTagSecondScan": "Hold the same tag near your phone again to initialize it.",
+  "initializeTagSuccess": "NFC tag initialized",
   "settings": "Settings",
   "preferences": "Preferences",
-  "settingsInProgress": "Settings are under design"
+  "settingsInProgress": "Settings are under design",
+  "exportDatabase": "Export database",
+  "exportDatabaseSuccess": "Exported {count} component records",
+  "@exportDatabaseSuccess": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "exportDatabaseFailed": "The database could not be exported. Try again.",
+  "importDatabase": "Import database",
+  "importDatabaseConfirmation": "This backup contains {count} records. Continuing will replace the current local database and cannot be undone. NFC tag contents will not be changed.",
+  "@importDatabaseConfirmation": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "confirmImportDatabase": "Import backup",
+  "importDatabaseSuccess": "Imported {count} component records",
+  "@importDatabaseSuccess": {
+    "placeholders": {
+      "count": { "type": "String" }
+    }
+  },
+  "invalidBackupFile": "The selected file is not a valid CompBox backup",
+  "importDatabaseFailed": "The database could not be imported. Try again.",
+  "clearDatabase": "Clear database",
+  "clearDatabaseConfirmation": "This cannot be undone. All locally stored component records will be permanently deleted. NFC tag contents will not be changed.",
+  "confirmClearDatabase": "Clear database",
+  "clearDatabaseSuccess": "Local database cleared",
+  "delete": "Delete",
+  "recordDeleted": "Record deleted"
 }
