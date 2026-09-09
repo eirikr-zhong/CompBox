@@ -44,6 +44,7 @@ jobs:
         run: |
           python3 -m pip install -r tools/requirements.txt
           flutter pub get
+          dart run rive_native:setup --verbose --clean --platform linux
 
       - name: Validate generated resources
         run: |
