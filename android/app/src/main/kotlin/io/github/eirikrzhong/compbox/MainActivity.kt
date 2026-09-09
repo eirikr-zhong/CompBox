@@ -1,4 +1,4 @@
-package com.example.comp_box
+package io.github.eirikrzhong.compbox
 
 import android.app.Activity
 import android.content.Intent
@@ -91,7 +91,7 @@ class MainActivity : FlutterActivity() {
     )
 
     companion object {
-        private const val BACKUP_CHANNEL = "com.example.comp_box/component_backup"
+        private const val BACKUP_CHANNEL = "io.github.eirikrzhong.compbox/component_backup"
         private const val BACKUP_EXPORT_REQUEST_CODE = 7314
     }
 }

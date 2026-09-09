@@ -1,0 +1,95 @@
+name: Release Android APK
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Require a tag from dev
+        run: |
+          git fetch origin dev
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/dev
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: gradle
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2.23.0
+        with:
+          channel: stable
+          flutter-version: 3.47.0
+          cache: true
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install -r tools/requirements.txt
+          flutter pub get
+          dart run rive_native:setup --verbose --clean --platform linux
+
+      - name: Validate generated resources
+        run: |
+          python3 tools/resource_sync.py prepare
+          python3 -m unittest tools/test_resource_sync.py
+          git diff --exit-code -- assets/resource
+
+      - name: Test and analyze
+        run: |
+          flutter test
+          flutter analyze
+
+      - name: Restore Android signing files
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEY_PROPERTIES_BASE64: ${{ secrets.ANDROID_KEY_PROPERTIES_BASE64 }}
+        run: |
+          test -n "$ANDROID_KEYSTORE_BASE64"
+          test -n "$ANDROID_KEY_PROPERTIES_BASE64"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" \
+            | base64 --decode > android/app/compbox-signing-keystore.p12
+          printf '%s' "$ANDROID_KEY_PROPERTIES_BASE64" \
+            | base64 --decode > android/key.properties
+
+      - name: Build signed APK
+        run: flutter build apk --release
+
+      - name: Prepare release files
+        run: |
+          mkdir -p dist
+          cp build/app/outputs/flutter-apk/app-release.apk \
+            "dist/CompBox-${GITHUB_REF_NAME}-android.apk"
+          cd dist
+          sha256sum "CompBox-${GITHUB_REF_NAME}-android.apk" \
+            > "CompBox-${GITHUB_REF_NAME}-android.apk.sha256"
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/* --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" dist/* \
+              --verify-tag \
+              --generate-notes \
+              --title "CompBox ${GITHUB_REF_NAME}"
+          fi

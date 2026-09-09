@@ -139,7 +139,7 @@ class PlatformComponentBackupFileService implements ComponentBackupFileService {
   const PlatformComponentBackupFileService();
 
   static const _backupChannel = MethodChannel(
-    'com.example.comp_box/component_backup',
+    'io.github.eirikrzhong.compbox/component_backup',
   );
 
   @override

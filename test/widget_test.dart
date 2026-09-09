@@ -551,11 +551,14 @@ void main() {
     await reveal(tester, find.byKey(const Key('nfc-save-button')));
     await tester.tap(find.byKey(const Key('nfc-save-button')));
     await tester.pumpAndSettle();
+    await tester.pump(const Duration(milliseconds: 900));
+    await tester.pumpAndSettle();
 
     expect(nfc.writeCalls, 1);
     expect(repository.byLocation('A-01-01'), isNull);
     expect(find.byKey(const Key('nfc-grid-overview-page')), findsOneWidget);
     expect(find.text('A-01-01'), findsOneWidget);
+    expect(find.byKey(const Key('nfc-write-failure-icon')), findsNothing);
   });
 
   testWidgets('return exits an invalid editor without field validation', (
