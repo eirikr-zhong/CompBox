@@ -7,9 +7,8 @@ must not be the only place where the key is backed up.
 
 ## Before the first public release
 
-1. Replace the current `com.example.comp_box` application ID with a permanent,
-   globally unique ID. Changing it later makes Android treat the app as a
-   different application.
+1. Confirm that `io.github.eirikrzhong.compbox` is the permanent application ID.
+   Changing it later makes Android treat the app as a different application.
 2. Decide whether the current keystore is the permanent production signing key.
    If it has not signed a public build yet, replace development-grade passwords
    before the first release.
