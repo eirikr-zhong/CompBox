@@ -1,9 +1,11 @@
 # Publishing Android releases with GitHub
 
-CompBox publishes a directly installable Android APK from GitHub Actions. The
-APK is signed in the temporary Actions runner with the same private key used for
-every release. GitHub stores encrypted copies of the build credentials, but it
-must not be the only place where the key is backed up.
+CompBox publishes a directly installable `arm64-v8a` Android APK from GitHub
+Actions. The APK supports 64-bit Arm Android devices only; `armeabi-v7a`, x86,
+and x86_64 builds are not published. The APK is signed in the temporary Actions
+runner with the same private key used for every release. GitHub stores encrypted
+copies of the build credentials, but it must not be the only place where the key
+is backed up.
 
 ## Before the first public release
 
@@ -76,7 +78,7 @@ The `Release Android APK` workflow then:
 1. Generates and validates the runtime resources.
 2. Runs the Python tests, Flutter tests, and static analysis.
 3. Restores the signing files from GitHub Secrets.
-4. Builds the signed release APK.
+4. Builds and verifies the signed `arm64-v8a` release APK.
 5. Publishes the APK and its SHA-256 checksum to the matching GitHub Release.
 
 The tag should point at the exact commit intended for release. Do not move or
@@ -88,8 +90,9 @@ Compare the APK against the published checksum, then inspect its signing
 certificate with the Android SDK build tools:
 
 ```sh
-sha256sum -c CompBox-v1.0.0-android.apk.sha256
-apksigner verify --verbose --print-certs CompBox-v1.0.0-android.apk
+sha256sum -c CompBox-v1.0.2-android-arm64-v8a.apk.sha256
+apksigner verify --verbose --print-certs \
+  CompBox-v1.0.2-android-arm64-v8a.apk
 ```
 
 Record the production certificate's SHA-256 digest somewhere independent of

@@ -69,17 +69,31 @@ jobs:
           printf '%s' "$ANDROID_KEY_PROPERTIES_BASE64" \
             | base64 --decode > android/key.properties
 
-      - name: Build signed APK
-        run: flutter build apk --release
+      - name: Build signed arm64 APK
+        run: >-
+          flutter build apk --release
+          --target-platform android-arm64
+          --split-per-abi
+
+      - name: Verify APK architecture
+        run: |
+          apk="build/app/outputs/flutter-apk/app-arm64-v8a-release.apk"
+          test -f "$apk"
+          unzip -Z1 "$apk" > apk-entries.txt
+          actual_abis=$(sed -n 's#^lib/\([^/]*\)/.*#\1#p' apk-entries.txt | sort -u)
+          if [ "$actual_abis" != "arm64-v8a" ]; then
+            echo "Expected only arm64-v8a, found: $actual_abis"
+            exit 1
+          fi
 
       - name: Prepare release files
         run: |
           mkdir -p dist
-          cp build/app/outputs/flutter-apk/app-release.apk \
-            "dist/CompBox-${GITHUB_REF_NAME}-android.apk"
+          cp build/app/outputs/flutter-apk/app-arm64-v8a-release.apk \
+            "dist/CompBox-${GITHUB_REF_NAME}-android-arm64-v8a.apk"
           cd dist
-          sha256sum "CompBox-${GITHUB_REF_NAME}-android.apk" \
-            > "CompBox-${GITHUB_REF_NAME}-android.apk.sha256"
+          sha256sum "CompBox-${GITHUB_REF_NAME}-android-arm64-v8a.apk" \
+            > "CompBox-${GITHUB_REF_NAME}-android-arm64-v8a.apk.sha256"
 
       - name: Publish GitHub Release
         env:
