@@ -37,6 +37,17 @@ flutter test
 flutter analyze
 ```
 
+## GitHub releases
+
+The repository includes a tag-triggered workflow that validates the project,
+builds a signed Android APK, generates a SHA-256 checksum, and attaches both
+files to a GitHub Release. The signing keystore and properties file stay out of
+Git and are restored from encrypted GitHub Actions secrets during the build.
+
+See [`docs/releasing.md`](docs/releasing.md) for signing setup, release commands,
+key backup requirements, and the difference between GitHub and Google Play
+distribution.
+
 ## Project layout
 
 - `lib/main.dart` contains the current application UI and page state.
