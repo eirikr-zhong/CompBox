@@ -15,18 +15,18 @@ must not be the only place where the key is backed up.
 3. Store the final keystore, alias, passwords, and recovery instructions in an
    encrypted offline backup. Losing the key prevents direct GitHub APK installs
    from receiving normally signed updates.
-4. Keep `android/key.properties` and all `*.jks` files out of Git. The existing
-   `android/.gitignore` already excludes them.
+4. Keep `android/key.properties`, `*.jks`, and `*.p12` files out of Git. The
+   existing `android/.gitignore` already excludes them.
 
 The workflow expects the keystore at
-`android/app/compbox-upload-keystore.jks`. Its decoded `key.properties` must use
+`android/app/compbox-signing-keystore.p12`. Its decoded `key.properties` must use
 this relative path. Start from `android/key.properties.example` if needed:
 
 ```properties
 storePassword=<keystore-password>
 keyPassword=<key-password>
 keyAlias=<key-alias>
-storeFile=compbox-upload-keystore.jks
+storeFile=compbox-signing-keystore.p12
 ```
 
 ## Configure GitHub Actions secrets
@@ -40,7 +40,7 @@ With GitHub CLI authenticated for this repository, macOS and Linux can create
 both secrets without writing additional plaintext files:
 
 ```sh
-base64 < android/app/compbox-upload-keystore.jks \
+base64 < android/app/compbox-signing-keystore.p12 \
   | tr -d '\n' \
   | gh secret set ANDROID_KEYSTORE_BASE64
 

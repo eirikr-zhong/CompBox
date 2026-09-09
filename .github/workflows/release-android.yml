@@ -65,7 +65,7 @@ jobs:
           test -n "$ANDROID_KEYSTORE_BASE64"
           test -n "$ANDROID_KEY_PROPERTIES_BASE64"
           printf '%s' "$ANDROID_KEYSTORE_BASE64" \
-            | base64 --decode > android/app/compbox-upload-keystore.jks
+            | base64 --decode > android/app/compbox-signing-keystore.p12
           printf '%s' "$ANDROID_KEY_PROPERTIES_BASE64" \
             | base64 --decode > android/key.properties
 

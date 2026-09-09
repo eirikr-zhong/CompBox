@@ -1,4 +1,4 @@
 storePassword=<keystore-password>
 keyPassword=<key-password>
 keyAlias=<key-alias>
-storeFile=compbox-upload-keystore.jks
+storeFile=compbox-signing-keystore.p12
