@@ -12,8 +12,9 @@
 .swiftpm/
 migrate_working_dir/
 
-# Local image files
-*.png
+# Local design-reference images
+/Scan.png
+/Scan_save.png
 
 # IntelliJ related
 *.iml
